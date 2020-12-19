@@ -1,7 +1,19 @@
+@charset "UTF-8";
 @import 'reset';
 
+/* 初期設定 */
+#wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Noto Sans JP', 'ヒラギノ角ゴ Pro W', 'Hiragino Kaku Gothic Pro', 'メイリオ', '游ゴシック', '游ゴシック体', sans-serif;
+    overflow: hidden;
+    padding-bottom: 200px;
+    box-sizing: border-box;
+}
+
 .header {
-    .title-div{
+    > .title-div{
         display: flex;
         justify-content: center;
         width: 100%;
@@ -15,7 +27,7 @@
         z-index: 0;
         overflow: hidden;
     }
-    .title-div:before{
+    > .title-div:before{
         content: '';
         background: inherit;
         -webkit-filter: blur(3px);
@@ -97,9 +109,59 @@
         font-size: 18px;
         text-align: left;
     }
-
+    > .top-img-div > .profile-div > .profile-txt-div >.last-txt {
+        padding: 1em 0 0 0;
+    }
+    > .top-img-div > .profile-div > .profile-txt-div > .last-txt > .link-to-profile {
+        color: #5F7BF0;
+    }
 }
 
+footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    background: url('img/top2.jpeg') no-repeat center;
+    background-size: cover;
+    text-align: center;
+    color: #ffffff;
+    z-index: 0;
+    overflow: hidden;
 
-
-
+    > .footer-ul {
+        display: flex;
+    }
+    > .footer-ul > .footer-li {
+        margin: 0 40px;
+    }
+    > .footer-ul > .footer-li > .footer-link {
+        color: #ffffff;
+        font-size: 23px;
+    }
+    > .copyright {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        font-size: 15px;
+    }
+}
+footer:before{
+    content: '';
+    background: inherit;
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    z-index: -1;
+}

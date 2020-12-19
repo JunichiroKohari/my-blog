@@ -10,7 +10,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<div id="#wrapper">
+<div id="wrapper">
 	<header class="header">
 		<div class="title-div">
 			<img src="<?php bloginfo('template_directory'); ?>/img/blogtitle.png" class="header-img1" alt="ブログトップ画像">
@@ -33,9 +33,10 @@
 					<img src="<?php bloginfo('template_directory'); ?>/img/profile-icon.png" class="profile-icon-img" alt="プロフィールアイコン">
 				</div>
 				<div class="profile-txt-div">
-					<p>ご訪問ありがとうございます!Junichiro Kohariと申します。</p>
+					<p>ご訪問ありがとうございます！Junichiro Kohariと申します。</p>
 					<p>大阪府内でSEとして働くかたわら、Web制作のお仕事も行っております。</p>
 					<p>このブログではIT業界で働く僕が、ITの技術や日々の業務で学んだこと、プライベートでやっている趣味に関することを発信していきます。</p>
+					<p class="last-txt">詳しいプロフィールは<a href="#" class="link-to-profile">こちら</a></p>
 				</div>
 			</div>
 		</div>
