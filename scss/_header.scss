@@ -1,0 +1,111 @@
+.header {
+    > .title-div{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        font-size: 32px;
+        line-height: 350px;
+        background: url('img/top1.jpeg') no-repeat center;
+        background-size: cover;
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+    }
+    > .title-div:before{
+        content: '';
+        background: inherit;
+        -webkit-filter: blur(3px);
+        -moz-filter: blur(3px);
+        -o-filter: blur(3px);
+        -ms-filter: blur(3px);
+        filter: blur(3px);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        z-index: -1;
+    }
+    > .title-div > .title-link > .title-img {
+        display: block;
+        width: 100%;
+    }
+    > .nav > .nav-ul {
+        display: flex;
+        justify-content: space-around;
+        background: #AE4C35;
+    }
+    > .nav > .nav-ul > .nav-li {
+        transition: all 0.3s;
+    }
+
+    > .nav > .nav-ul > .nav-li > .nav-link {
+        display: block;
+        padding: 20px 52px;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 500;
+        transition: all 0.3s;
+    }
+    > .nav > .nav-ul > .nav-li:hover {
+        background: #fff;
+
+            .nav-link {
+                color: #AE4C35;
+            }
+    }
+    > .top-img-div  {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 350px;
+        text-align: center;
+        background: url('img/top2.jpeg') no-repeat center;
+        background-size: cover;
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+    }
+    > .top-img-div > .profile-div {
+        display: flex;
+        align-items: center;
+        width: 750px;
+        height: 300px;
+        background: rgba(252, 252, 252, 0.9);
+    }
+    > .top-img-div > .profile-div > .profile-icon-div {
+        display: flex;
+        flex: 3;
+        position: relative;
+    }
+    > .top-img-div > .profile-div > .profile-icon-div > .profile-icon-img {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        width: 150px;
+    }
+    > .top-img-div > .profile-div > .profile-icon-div::after {
+        content: 'Junichiro Kohari';
+        position: absolute;
+        bottom: -13px;
+        left: 74px;
+        font-family: cursive;
+    }
+    > .top-img-div > .profile-div > .profile-txt-div {
+        flex: 7;
+        padding: 1em;
+        font-size: 18px;
+        text-align: left;
+    }
+    > .top-img-div > .profile-div > .profile-txt-div >.last-txt {
+        padding: 1em 0 0 0;
+    }
+    > .top-img-div > .profile-div > .profile-txt-div > .last-txt > .link-to-profile {
+        transition: all 0.5s;
+    }
+    > .top-img-div > .profile-div > .profile-txt-div > .last-txt > .link-to-profile:hover {
+        opacity: 0.5;
+    }
+}

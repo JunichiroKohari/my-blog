@@ -12,9 +12,11 @@
 <body <?php body_class(); ?>>
 <div id="wrapper">
 	<header class="header">
-		<div class="title-div">
-			<img src="<?php bloginfo('template_directory'); ?>/img/blogtitle.png" class="header-img1" alt="ブログトップ画像">
-		</div>
+		<h1 class="title-div">
+			<a href="#wrapper" class="title-link">
+				<img src="<?php bloginfo('template_directory'); ?>/img/blogtitle.png" class="title-img" alt="ブログトップ画像">
+			</a>
+		</h1>
 		<nav class="nav">
 			<ul class="nav-ul">
 				<li class="nav-li"><a href="#wrapper" class="nav-link">ホーム</a></li>
@@ -22,9 +24,7 @@
 				<li class="nav-li"><a href="#access" class="nav-link">Web制作</a></li>
 				<li class="nav-li"><a href="#contact" class="nav-link">プログラミング</a></li>
 				<li class="nav-li"><a href="#contact" class="nav-link">英語</a></li>
-				<li class="nav-li"><a href="#contact" class="nav-link">映画</a></li>
-				<li class="nav-li"><a href="#contact" class="nav-link">旅行</a></li>
-				<li class="nav-li"><a href="#contact" class="nav-link">お問い合わせ</a></li>
+				<li class="nav-li"><a href="#contact" class="nav-link">お問合せ</a></li>
 			</ul>
         </nav>
 		<div class="top-img-div">
