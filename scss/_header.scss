@@ -33,19 +33,21 @@
     }
     > .nav > .nav-ul {
         display: flex;
-        justify-content: space-around;
         background: #AE4C35;
     }
     > .nav > .nav-ul > .nav-li {
+        flex: 5;
+        padding: 1.5em 2em;
+        text-align: center;
         transition: all 0.3s;
     }
 
     > .nav > .nav-ul > .nav-li > .nav-link {
         display: block;
-        padding: 20px 52px;
         color: #fff;
         font-size: 1.5rem;
         font-weight: 500;
+        white-space: nowrap;
         transition: all 0.3s;
     }
     > .nav > .nav-ul > .nav-li:hover {
@@ -60,7 +62,7 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 350px;
+        padding: 2em 0;
         text-align: center;
         background: url('img/top2.jpeg') no-repeat center;
         background-size: cover;
@@ -71,8 +73,9 @@
     > .top-img-div > .profile-div {
         display: flex;
         align-items: center;
-        width: 750px;
-        height: 300px;
+        width: 80%;
+        max-width: 900px;
+        padding: 1% 0;
         background: rgba(252, 252, 252, 0.9);
     }
     > .top-img-div > .profile-div > .profile-icon-div {
@@ -96,7 +99,7 @@
     > .top-img-div > .profile-div > .profile-txt-div {
         flex: 7;
         padding: 1em;
-        font-size: 18px;
+        font-size: calc(10px + 0.6vw);
         text-align: left;
     }
     > .top-img-div > .profile-div > .profile-txt-div >.last-txt {

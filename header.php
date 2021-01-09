@@ -13,13 +13,13 @@
 <div id="wrapper">
 	<header class="header">
 		<h1 class="title-div">
-			<a href="#wrapper" class="title-link">
+			<a href="<?php echo home_url() ?>" class="title-link">
 				<img src="<?php bloginfo('template_directory'); ?>/img/blogtitle.png" class="title-img" alt="ブログトップ画像">
 			</a>
 		</h1>
 		<nav class="nav">
 			<ul class="nav-ul">
-				<li class="nav-li"><a href="#wrapper" class="nav-link">ホーム</a></li>
+				<li class="nav-li"><a href="<?php echo home_url() ?>" class="nav-link">ホーム</a></li>
 				<li class="nav-li"><a href="#about" class="nav-link">デザイン</a></li>
 				<li class="nav-li"><a href="#access" class="nav-link">Web制作</a></li>
 				<li class="nav-li"><a href="#contact" class="nav-link">プログラミング</a></li>
