@@ -3,34 +3,43 @@
 <div class="contents">
     <div class="popular-articles">
         <h2 class="popular-article-heading">👑 人気記事　👑</h2>
-        <ul id="main-slider" class="slider">
-            <?php
-                // views post metaで記事のPV情報を取得する
-                setPostViews(get_the_ID());
-                $args = array(
-                    'meta_key' => 'post_views_count',
-                    'orderby' => 'meta_value_num',
-                    'order' => 'DESC',
-                    'posts_per_page' => 5 // ← 5件取得
-                );
-                $query = new WP_Query($args);
-                if ($query->have_posts()) :
-                    while ($query->have_posts()) :
-                        $query->the_post();
-            ?>
-                <li>
-                    <a href="<?php the_permalink(); ?>">
-                        <?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'post-thumbnail'); } ?>
-                    <p>
-                        <?php the_title(); ?>
-                    </p>
-                    <?php echo getPostViews(get_the_ID()); // 記事閲覧回数表示 ?>
-                </li>
-            <?php
-                    endwhile;
-                endif;
-                wp_reset_postdata();
-            ?>
+        <ul class="popular-articles-ul">
+            <li class="popular-article-li">
+                <article class="popular-article">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/no-image.png" alt="アイキャッチ画像" class="thumbnail-img">
+                    <h2 class="article-title">テスト記事</h2>
+                    <div class="time-and-category">
+                        <div class="time">
+                            <i class="far fa-calendar-alt"></i><time class="postedtime" datetime="2020-01-12">2020年1月12日</time>
+                        </div>
+                        <a href="#" class="category">#プログラミング</a>
+                    </div>
+                </article>
+            </li>
+            <li class="popular-article-li popular-article-li-center">
+                <article class="popular-article">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/no-image.png" alt="アイキャッチ画像" class="thumbnail-img">
+                    <h2 class="article-title">テスト記事</h2>
+                    <div class="time-and-category">
+                        <div class="time">
+                            <i class="far fa-calendar-alt"></i><time class="postedtime" datetime="2020-01-12">2020年1月12日</time>
+                        </div>
+                        <a href="#" class="category">#プログラミング</a>
+                    </div>
+                </article>
+            </li>
+            <li class="popular-article-li">
+                <article class="popular-article">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/no-image.png" alt="アイキャッチ画像" class="thumbnail-img">
+                    <h2 class="article-title">テスト記事</h2>
+                    <div class="time-and-category">
+                        <div class="time">
+                            <i class="far fa-calendar-alt"></i><time class="postedtime" datetime="2020-01-12">2020年1月12日</time>
+                        </div>
+                        <a href="#" class="category">#プログラミング</a>
+                    </div>
+                </article>
+            </li>
         </ul>
     </div>
     <div class="ad-placeholder">広告</div>
@@ -45,7 +54,7 @@
                                 <?php if (has_post_thumbnail()): ?>
                                     <?php the_post_thumbnail( 'medium' ) ?>
                                 <?php else: ?>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/no-image.png" alt="サムネイル画像なし" class="wp-post-image">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/no-image.png" alt="サムネイル画像なし" class="wp-post-image">
                                 <?php endif; ?>
                             </a>
                         </div>
