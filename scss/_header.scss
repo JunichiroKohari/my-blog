@@ -45,7 +45,7 @@
     > .nav > .nav-ul > .nav-li > .nav-link {
         display: block;
         color: #fff;
-        font-size: 1.5rem;
+        font-size: calc(10px + .4vw);
         font-weight: 500;
         white-space: nowrap;
         transition: all 0.3s;
@@ -110,5 +110,11 @@
     }
     > .top-img-div > .profile-div > .profile-txt-div > .last-txt > .link-to-profile:hover {
         opacity: 0.5;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .header > .nav > .nav-ul > .nav-li {
+        padding: 1em;
     }
 }

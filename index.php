@@ -16,7 +16,7 @@
                     </div>
                 </article>
             </li>
-            <li class="popular-article-li popular-article-li-center">
+            <li class="popular-article-li  popular-article-center">
                 <article class="popular-article">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/no-image.png" alt="アイキャッチ画像" class="thumbnail-img">
                     <h2 class="article-title">テスト記事</h2>
@@ -28,7 +28,7 @@
                     </div>
                 </article>
             </li>
-            <li class="popular-article-li">
+            <li class="popular-article-li popular-article-right">
                 <article class="popular-article">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/no-image.png" alt="アイキャッチ画像" class="thumbnail-img">
                     <h2 class="article-title">テスト記事</h2>
@@ -61,9 +61,10 @@
                         <div class="article-right-div">
                             <h2 class="article-title"><a href="<?php the_permalink(); ?>" class="article-title-link"><?php the_title(); ?></a></h2>
                             <div class="article-metainfo">
-                                <time class="postedtime" datetime="<?php the_time('Y-m-d'); ?>">
-                                    <?php the_time('Y年m月d日'); ?>
-                                </time>
+                                <div class="time-div">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <time class="postedtime" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y年m月d日'); ?></time>
+                                </div>
                                 <?php the_category(); ?>
                             </div>
                             <div class="post-description">

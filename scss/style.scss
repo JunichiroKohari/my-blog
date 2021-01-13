@@ -76,11 +76,17 @@ a {
 @media screen and (max-width: 960px) {
     .contents {
         width: 90%;
-        > .popular-articles > .popular-articles-ul > .popular-article-li {
+
+        > .popular-articles > .popular-articles-ul > .popular-article-right {
             display: none;
         }
-        > .popular-articles > .popular-articles-ul > .popular-article-li-center {
-            display: block;
+    }
+}
+@media screen and (max-width: 560px) {
+    .contents {
+
+        > .popular-articles > .popular-articles-ul > .popular-article-center {
+            display: none;
         }
     }
 }
@@ -114,7 +120,7 @@ main {
     > .post > .article-right-div > .article-metainfo {
         display: flex;
     }
-    > .post > .article-right-div > .article-metainfo > .postedtime {
+    > .post > .article-right-div > .article-metainfo > .time-div >.postedtime {
         margin: 0 10px 0 0;
     }
     > .post > .article-right-div > .post-description {
