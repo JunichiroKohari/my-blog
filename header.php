@@ -27,7 +27,12 @@
 				<li class="nav-li"><a href="#contact" class="nav-link">英語</a></li>
 				<li class="nav-li"><a href="#contact" class="nav-link">お問合せ</a></li>
 			</ul>
-        </nav>
+		</nav>
+		<div class="hamb-button">
+            <span class="border"></span>
+            <span class="border"></span>
+            <span class="border"></span>
+        </div>
 		<div class="top-img-div">
 			<div class="profile-div">
 				<div class="profile-icon-div">
