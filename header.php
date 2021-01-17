@@ -18,6 +18,11 @@
 				<img src="<?php bloginfo('template_directory'); ?>/img/blogtitle.png" class="title-img" alt="ブログトップ画像">
 			</a>
 		</h1>
+		<div class="hamb-button">
+			<span class="border"></span>
+			<span class="border"></span>
+			<span class="border"></span>
+		</div>
 		<nav class="nav">
 			<ul class="nav-ul">
 				<li class="nav-li"><a href="<?php echo home_url() ?>" class="nav-link">ホーム</a></li>
@@ -28,15 +33,11 @@
 				<li class="nav-li"><a href="#contact" class="nav-link">お問合せ</a></li>
 			</ul>
 		</nav>
-		<div class="hamb-button">
-            <span class="border"></span>
-            <span class="border"></span>
-            <span class="border"></span>
-        </div>
 		<div class="top-img-div">
 			<div class="profile-div">
 				<div class="profile-icon-div">
 					<img src="<?php bloginfo('template_directory'); ?>/img/profile-icon.png" class="profile-icon-img" alt="プロフィールアイコン">
+					<span class="my-name">Junichiro Kohari</span>
 				</div>
 				<div class="profile-txt-div">
 					<p>ご訪問ありがとうございます！Junichiro Kohariと申します。</p>
