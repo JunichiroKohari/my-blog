@@ -1,4 +1,7 @@
 <?php
+    // タイトル出力
+    add_theme_support( 'title-tag' );
+
     // css, javascript 読み込み
     function add_assets() {
         /* css */
