@@ -3,12 +3,12 @@
     function add_assets() {
         /* css */
         // slick
-        wp_enqueue_style(
-            'slick',
-            get_theme_file_uri('//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'),
-            array(),
-            '1.8.1'
-        );
+        // wp_enqueue_style(
+        //     'slick',
+        //     get_theme_file_uri('//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'),
+        //     array(),
+        //     '1.8.1'
+        // );
         // my css
         wp_enqueue_style(
             'my-style',
@@ -28,13 +28,13 @@
             true
         );
         // slick
-        wp_enqueue_script(
-            'slick',
-            '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
-            array(),
-            '1.8.1',
-            true
-        );
+        // wp_enqueue_script(
+        //     'slick',
+        //     '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
+        //     array(),
+        //     '1.8.1',
+        //     true
+        // );
         // my javascript
         wp_enqueue_script(
             'base-script',
