@@ -75,7 +75,7 @@
         align-items: center;
         width: 80%;
         max-width: 900px;
-        padding: 1em 0;
+        padding: 2em;
         background: rgba(252, 252, 252, 0.9);
     }
     > .top-img-div > .profile-div > .profile-icon-div {
@@ -122,12 +122,23 @@
 @media screen and (max-width: 560px) {
     .header {
         > .title-div{
+            position: fixed;
             height: 50px;
             padding: .5vh 1vw;
             background: #AE4C35;
+            align-items: center;
+            z-index: 1;
         }
         > .title-div > .title-link > .title-img {
             width: 75%;
+        }
+        > .top-img-div {
+            padding: 45px 0 0 0;
+        }
+        > .top-img-div > .profile-div {
+            width: 100%;
+            background: rgba(74, 72, 72, 0.9);
+            color: #fff;
         }
 
         /* ハンバーガーメニュー */
@@ -135,7 +146,7 @@
             display: flex;
             flex-flow: column nowrap;
             justify-content: space-around;
-            position: absolute;
+            position: fixed;
             top: 8px;
             right: 0;
             margin: 5px;
@@ -197,7 +208,7 @@
         }
         .hamb-nav {
             position: fixed;
-            top: -70px;
+            top: -72px;
             right: 0;
             width: 100%;
 
@@ -212,18 +223,6 @@
             padding-right: .28em;
             font-size: 16px;
             font-weight: 400;
-        }
-
-        .title-div {
-            align-items: center;
-        }
-        .top-img-div {
-            padding: 0;
-        }
-        .top-img-div > .profile-div {
-            width: 100%;
-            background: rgba(74, 72, 72, 0.9);
-            color: #fff;
         }
     }
 }
