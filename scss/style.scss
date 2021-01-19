@@ -65,7 +65,7 @@ a {
     > .popular-articles > .popular-articles-ul > .popular-article-li > .popular-article > .time-and-category {
         display: flex;
         justify-content: space-between;
-        padding: 0 1em .5em 1em;
+        padding: 0 1em 1em 1em;
     }
     > .popular-articles > .popular-articles-ul > .popular-article-li > .popular-article > .time-and-category > .time > .postedtime {
         padding: 0 0 0 .2em;
@@ -122,6 +122,7 @@ main {
         width: calc(100% - 160px);
     }
     > .post > .article-right-div > .article-title {
+        margin: 10px 0 0 0;
         font-size: 24px;
     }
     > .post > .article-right-div > .article-title > .article-title-link {
@@ -129,11 +130,13 @@ main {
     }
     > .post > .article-right-div > .article-metainfo {
         display: flex;
+        margin: 5px 0;
     }
     > .post > .article-right-div > .article-metainfo > .time-div >.postedtime {
         margin: 0 10px 0 0;
     }
     > .post > .article-right-div > .post-description {
+        margin: 20px 0 0 0;
         font-size: 16px;
         overflow-wrap: break-word;
     }
