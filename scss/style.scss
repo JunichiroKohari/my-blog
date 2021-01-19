@@ -39,7 +39,7 @@ a {
     }
     > .popular-articles > .popular-article-heading {
         margin: 0 0 1.2em 0;
-        font-size: calc(16px + .5vw);
+        font-size: calc(1.6rem + .5vw);
         text-align: center;
         white-space: nowrap;
     }
@@ -59,7 +59,7 @@ a {
     }
     > .popular-articles > .popular-articles-ul > .popular-article-li > .popular-article > .article-title {
         padding: .4em;
-        font-size: 21px;
+        font-size: 2rem;
         font-weight: 500;
     }
     > .popular-articles > .popular-articles-ul > .popular-article-li > .popular-article > .time-and-category {
@@ -76,7 +76,7 @@ a {
         color: white;
         padding: 30px 0;
         text-align: center;
-        font-size: 20px;
+        font-size: 2rem;
         margin: 40px 0;
     }
     > .main-and-aside {
@@ -123,7 +123,7 @@ main {
     }
     > .post > .article-right-div > .article-title {
         margin: 10px 0 0 0;
-        font-size: 24px;
+        font-size: 2.4rem;
     }
     > .post > .article-right-div > .article-title > .article-title-link {
         color: black;
@@ -137,11 +137,11 @@ main {
     }
     > .post > .article-right-div > .post-description {
         margin: 20px 0 0 0;
-        font-size: 16px;
+        font-size: 1.6rem;
         overflow-wrap: break-word;
     }
     > .post > .article-right-div > .post-description > p > .to-article-link {
-        font-size: calc(12px + .2vw);
+        font-size: calc(1.2rem + .2vw);
     }
 }
 .new-articles:nth-child(-n+2) > .post > .article-right-div > .article-title::before {
@@ -152,7 +152,7 @@ main {
     vertical-align: middle;
     background: #F52E5C;
     color: #fff;
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 @media screen and (max-width: 560px) {
     .new-articles{
@@ -201,11 +201,11 @@ main {
         border: 1px solid gray;
         margin: 0 .5em;
         padding: 5px 12px;
-        font-size: 16px;
+        font-size: 1.6rem;
     }
     > .pagenation-btn {
         border: 1px solid gray;
         padding: 5px 11px;
-        font-size: 14px;
+        font-size: 1.4rem;
     }
 }

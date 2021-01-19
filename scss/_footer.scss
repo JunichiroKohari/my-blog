@@ -25,7 +25,7 @@ footer {
     }
     > .footer-ul > .footer-li > .footer-link {
         color: #ffffff;
-        font-size: calc(12px + .7vw);
+        font-size: calc(1.2rem + .7vw);
         transition: all 0.3s;
     }
     > .footer-ul > .footer-li > .footer-link:hover {
@@ -35,7 +35,7 @@ footer {
         display: block;
         position: absolute;
         bottom: 0;
-        font-size: calc(10px + .4vw);
+        font-size: calc(1rem + .4vw);
     }
 }
 footer:before{
@@ -65,7 +65,7 @@ footer:before{
         }
         > .category-and-archive > .dropdown-label {
             margin: 1em 0 .3em 0;
-            font-size: calc(12px + .7vw);
+            font-size: calc(1.2rem + .7vw);
         }
         > .category-and-archive > .postform {
             background: #ffffff;
@@ -73,6 +73,7 @@ footer:before{
             text-align: center;
             padding: .8em;
             border: 1px solid gray;
+            border-radius: 5px;
         }
         > .footer-ul {
             flex-flow: column;
