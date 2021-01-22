@@ -10,21 +10,23 @@ aside {
     }
     > .widget {
         width: 85%;
-        border: 1px solid gray;
+        border-radius: 5px;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
         font-size: 1.4rem;
     }
     > .widget > .widget-title {
         padding: 5px 0;
         border-bottom: 1px solid gray;
+        border-radius: 5px;
         background: #AE4C35;
         color: #ffffff;
         font-size: 1.8rem;
     }
     > .widget > ul > li:first-child {
-        padding: 1em 0 0 0;
+        padding: 1.2em 0 0 0;
     }
     > .widget > ul > li:last-child {
-        padding: 0 0 1em 0;
+        padding: 0 0 1.2em 0;
     }
     > .widget > ul > li:not(:last-child):after {
         content: '';
