@@ -35,10 +35,10 @@ a {
     margin: 0 auto;
 
     > .popular-articles {
-        margin: 30px 0 0 0;
+        margin: 5em 0 0 0;
     }
     > .popular-articles > .popular-article-heading {
-        margin: 0 0 1.2em 0;
+        margin: 0 0 1.5em 0;
         font-size: calc(1.6rem + .5vw);
         text-align: center;
         white-space: nowrap;
@@ -50,22 +50,23 @@ a {
     > .popular-articles > .popular-articles-ul > .popular-article-li {
         width: 19vw;
         min-width: 200px;
-        border: 1px solid gray;
+        padding: 1em;
+        border-radius: 5px;
         background: #F5ECEC;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
     }
     > .popular-articles > .popular-articles-ul > .popular-article-li > .popular-article > .thumbnail-img {
         display: block;
         width: 100%;
     }
     > .popular-articles > .popular-articles-ul > .popular-article-li > .popular-article > .article-title {
-        padding: .4em;
+        padding: 1em 0;
         font-size: 2rem;
         font-weight: 500;
     }
     > .popular-articles > .popular-articles-ul > .popular-article-li > .popular-article > .time-and-category {
         display: flex;
         justify-content: space-between;
-        padding: 0 1em 1em 1em;
     }
     > .popular-articles > .popular-articles-ul > .popular-article-li > .popular-article > .time-and-category > .time > .postedtime {
         padding: 0 0 0 .2em;
@@ -77,7 +78,7 @@ a {
         padding: 30px 0;
         text-align: center;
         font-size: 2rem;
-        margin: 40px 0;
+        margin: 60px 0;
     }
     > .main-and-aside {
         display: flex;
@@ -119,6 +120,8 @@ main {
     > .post > .article-left-div {
         display: flex;
         align-items: center;
+        justify-content: center;
+        margin: 3em 3em;
     }
     > .post > .article-left-div > .thumbnail-link > .wp-post-image {
         display: block;
@@ -126,7 +129,7 @@ main {
     }
     > .post > .article-right-div {
         width: calc(100% - 160px);
-        padding: 0 3em;
+        padding: 0 3em 0 0;
     }
     > .post > .article-right-div > .article-title {
         margin: 1em 0 .3em 0;
@@ -208,11 +211,13 @@ main {
         border: 1px solid gray;
         margin: 0 .5em;
         padding: 5px 12px;
+        border-radius: 50%;
         font-size: 1.6rem;
     }
     > .pagenation-btn {
         border: 1px solid gray;
         padding: 5px 11px;
+        border-radius: 50%;
         font-size: 1.4rem;
     }
 }
