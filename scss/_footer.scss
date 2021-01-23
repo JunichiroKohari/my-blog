@@ -19,6 +19,8 @@ footer {
     }
     > .footer-ul {
         display: flex;
+        justify-content: center;
+        width: 80%;
     }
     > .footer-ul > .footer-li {
         margin: 0 40px;
