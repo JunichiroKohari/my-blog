@@ -24,7 +24,7 @@ a {
 }
 @media screen and (max-width: 560px) {
     #wrapper {
-        padding: 0 0 380px 0;
+        padding: 0 0 370px 0;
     }
 }
 
@@ -45,11 +45,11 @@ a {
     }
     > .popular-articles > .popular-articles-ul {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
     > .popular-articles > .popular-articles-ul > .popular-article-li {
         width: 19vw;
-        min-width: 200px;
+        min-width: 215px;
         padding: 1em;
         border-radius: 5px;
         background: #F5ECEC;
@@ -88,6 +88,10 @@ a {
     .contents {
         width: 90%;
 
+        > .popular-articles > .popular-articles-ul {
+            justify-content: space-evenly;
+        }
+
         > .popular-articles > .popular-articles-ul > .popular-article-right {
             display: none;
         }
@@ -97,7 +101,8 @@ a {
     .contents {
 
         > .popular-articles > .popular-articles-ul > .popular-article-li {
-            min-width: 80%;
+            min-width: 90%;
+            width: auto;
         }
         > .popular-articles > .popular-articles-ul > .popular-article-center {
             display: none;
@@ -129,10 +134,10 @@ main {
     }
     > .post > .article-right-div {
         width: calc(100% - 160px);
-        padding: 0 3em 0 0;
+        padding: 3em 3em 0 0;
+        word-break: break-all;
     }
     > .post > .article-right-div > .article-title {
-        margin: 1em 0 .3em 0;
         font-size: 2.4rem;
     }
     > .post > .article-right-div > .article-title > .article-title-link {
@@ -180,16 +185,15 @@ main {
             width: auto;
         }
         > .post > .article-left-div > .thumbnail-link > .wp-post-image {
-            width: auto;
             margin: 0 auto;
         }
         > .post > .article-right-div {
             width: 100%;
-            padding: 1em;
+            padding: 0 1em 1em 1em;
         }
         > .post > .article-right-div > .article-metainfo {
             justify-content: space-between;
-            margin: 3px 0 0 0;
+            margin: .4em 0 .8em 0;
         }
         > .post > .article-right-div > .post-description {
             display: none;
@@ -201,23 +205,19 @@ main {
 .pagenation {
     display: flex;
     justify-content: center;
-    margin: 8em;
+    margin: 6em;
 
     > .pagenation-ol {
         display: flex;
         margin: 0 .5em;
     }
     > .pagenation-ol > .pagenation-btn {
-        border: 1px solid gray;
         margin: 0 .5em;
         padding: 5px 12px;
-        border-radius: 50%;
         font-size: 1.6rem;
     }
     > .pagenation-btn {
-        border: 1px solid gray;
-        padding: 5px 11px;
-        border-radius: 50%;
+        padding: 7px 12px;
         font-size: 1.4rem;
     }
 }
