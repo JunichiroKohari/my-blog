@@ -5,7 +5,7 @@
         <h2 class="popular-article-heading">👑 人気記事　👑</h2>
         <ul class="popular-articles-ul">
             <li class="popular-article-li">
-                <article class="popular-article">
+                <article class="popular-article sp-version-article">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/no-image.png" alt="アイキャッチ画像" class="thumbnail-img">
                     <h2 class="article-title">テスト記事</h2>
                     <div class="time-and-category">
@@ -17,7 +17,7 @@
                 </article>
             </li>
             <li class="popular-article-li  popular-article-center">
-                <article class="popular-article">
+                <article class="popular-article sp-version-article">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/no-image.png" alt="アイキャッチ画像" class="thumbnail-img">
                     <h2 class="article-title">テスト記事</h2>
                     <div class="time-and-category">
@@ -29,7 +29,7 @@
                 </article>
             </li>
             <li class="popular-article-li popular-article-right">
-                <article class="popular-article">
+                <article class="popular-article sp-version-article">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/no-image.png" alt="アイキャッチ画像" class="thumbnail-img">
                     <h2 class="article-title">テスト記事</h2>
                     <div class="time-and-category">
@@ -48,7 +48,8 @@
             <?php if (have_posts()) : ?>
                 <?php while ( have_posts() ) : the_post(); ?>
                 <div class="new-articles">
-                    <article id="post-<?php the_ID(); ?>" <?php post_class('news'); ?>>
+                    <?php $classes = array('news', 'sp-version-article'); ?>
+                    <article id="post-<?php the_ID(); ?>" <?php post_class($classes); ?>>
                         <div class="article-left-div">
                             <a href="<?php the_permalink(); ?>" class="thumbnail-link">
                                 <?php if (has_post_thumbnail()): ?>
@@ -69,7 +70,7 @@
                             </div>
                             <div class="post-description">
                                 <?php the_excerpt(); ?>
-                                <p><a href="<?php the_permalink(); ?>" class="to-article-link">[続きを読む]</a></p>
+                                <a href="<?php the_permalink(); ?>" class="to-article-link">[続きを読む]</a>
                             </div>
                         </div>
                     </article>
