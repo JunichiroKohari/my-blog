@@ -4,39 +4,39 @@
     <div class="popular-articles">
         <h2 class="popular-article-heading">👑 人気記事　👑</h2>
         <ul class="popular-articles-ul">
-            <li class="popular-article-li">
-                <article class="popular-article sp-version-article">
+            <li class="popular-article-li sp-version-article">
+                <article class="popular-article">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/no-image.png" alt="アイキャッチ画像" class="thumbnail-img">
                     <h2 class="article-title">テスト記事</h2>
-                    <div class="time-and-category">
+                    <div class="article-metainfo">
                         <div class="time">
                             <i class="far fa-calendar-alt"></i><time class="postedtime" datetime="2020-01-12">2020年1月12日</time>
                         </div>
-                        <a href="#" class="category">#プログラミング</a>
+                        <a href="#" class="category">プログラミング</a>
                     </div>
                 </article>
             </li>
-            <li class="popular-article-li  popular-article-center">
-                <article class="popular-article sp-version-article">
+            <li class="popular-article-li  popular-article-center sp-version-article">
+                <article class="popular-article">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/no-image.png" alt="アイキャッチ画像" class="thumbnail-img">
                     <h2 class="article-title">テスト記事</h2>
-                    <div class="time-and-category">
+                    <div class="article-metainfo">
                         <div class="time">
                             <i class="far fa-calendar-alt"></i><time class="postedtime" datetime="2020-01-12">2020年1月12日</time>
                         </div>
-                        <a href="#" class="category">#プログラミング</a>
+                        <a href="#" class="category">プログラミング</a>
                     </div>
                 </article>
             </li>
-            <li class="popular-article-li popular-article-right">
-                <article class="popular-article sp-version-article">
+            <li class="popular-article-li popular-article-right sp-version-article">
+                <article class="popular-article">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/no-image.png" alt="アイキャッチ画像" class="thumbnail-img">
                     <h2 class="article-title">テスト記事</h2>
-                    <div class="time-and-category">
+                    <div class="article-metainfo">
                         <div class="time">
                             <i class="far fa-calendar-alt"></i><time class="postedtime" datetime="2020-01-12">2020年1月12日</time>
                         </div>
-                        <a href="#" class="category">#プログラミング</a>
+                        <a href="#" class="category">プログラミング</a>
                     </div>
                 </article>
             </li>
@@ -47,9 +47,8 @@
         <main class="main">
             <?php if (have_posts()) : ?>
                 <?php while ( have_posts() ) : the_post(); ?>
-                <div class="new-articles">
-                    <?php $classes = array('news', 'sp-version-article'); ?>
-                    <article id="post-<?php the_ID(); ?>" <?php post_class($classes); ?>>
+                <div class="new-articles sp-version-article">
+                    <article id="post-<?php the_ID(); ?>" <?php post_class('news'); ?>>
                         <div class="article-left-div">
                             <a href="<?php the_permalink(); ?>" class="thumbnail-link">
                                 <?php if (has_post_thumbnail()): ?>
