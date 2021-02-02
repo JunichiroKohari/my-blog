@@ -69,7 +69,6 @@
                             </div>
                             <div class="post-description">
                                 <?php the_excerpt(); ?>
-                                <a href="<?php the_permalink(); ?>" class="to-article-link">[続きを読む]</a>
                             </div>
                         </div>
                     </article>

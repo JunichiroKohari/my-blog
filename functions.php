@@ -124,6 +124,13 @@
     }
     add_shortcode('mainslider', 'the_slider');
 
+    // 「続きを読む」表示
+
+    function new_excerpt_more($post) {
+        return '  …  <a href="'. get_permalink($post->ID) . '">' . '続きを読む' . '</a>';
+   }
+   add_filter('excerpt_more', 'new_excerpt_more');
+
     /* ページネーション */
     function pagenation($pages = '', $range = 2){
         $showitems = ($range * 1)+1;
