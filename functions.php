@@ -125,11 +125,15 @@
     add_shortcode('mainslider', 'the_slider');
 
     // 「続きを読む」表示
-
     function new_excerpt_more($post) {
         return '  …  <a href="'. get_permalink($post->ID) . '">' . '続きを読む' . '</a>';
-   }
-   add_filter('excerpt_more', 'new_excerpt_more');
+    }
+    add_filter('excerpt_more', 'new_excerpt_more');
+    //　抜粋文字数設定
+    function twpp_change_excerpt_length( $length ) {
+        return 45;
+    }
+    add_filter( 'excerpt_length', 'twpp_change_excerpt_length', 999 );
 
     /* ページネーション */
     function pagenation($pages = '', $range = 2){
