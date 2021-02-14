@@ -41,7 +41,7 @@
                 </article>
             </li>
         </ul>
-    </div>
+    </div><!-- popular-articles -->
     <div class="ad-placeholder">広告</div>
     <div class="main-and-aside">
         <main class="main">
@@ -81,8 +81,8 @@
             <?php endif; ?>
         </main>
         <?php get_sidebar(); ?>
-    </div>
-</div>
+    </div><!-- main-and-aside -->
+</div><!-- contents -->
 
 
 <?php get_footer(); ?>
