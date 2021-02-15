@@ -1,8 +1,5 @@
 @charset "UTF-8";
-@import 'reset';
-@import 'header';
-@import 'footer';
-@import 'sidebar';
+@import 'reset', 'header', 'footer', 'sidebar';
 
 /* 初期設定 */
 a {
@@ -31,6 +28,7 @@ img {
     }
 }
 
+/* 記事 */
 .contents {
     display: flex;
     flex-flow: column;
@@ -111,11 +109,9 @@ img {
         }
     }
 }
-
 main {
     flex: 7.5;
 }
-
 .new-articles {
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
     margin: 0 0 5em 0;
