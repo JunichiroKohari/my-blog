@@ -79,8 +79,6 @@
         background: rgba(252, 252, 252, 0.9);
     }
     > .top-img-div > .profile-div > .profile-icon-div {
-        display: flex;
-        flex-flow: column;
         flex: 3;
         position: relative;
     }
@@ -92,6 +90,7 @@
         max-width: 100%;
     }
     > .top-img-div > .profile-div > .profile-icon-div > .my-name {
+        display: block;
         font-family: cursive;
     }
     > .top-img-div > .profile-div > .profile-txt-div {
