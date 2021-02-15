@@ -39,9 +39,7 @@
 					<span class="my-name">Junichiro Kohari</span>
 				</div>
 				<div class="profile-txt-div">
-					<p>ご訪問ありがとうございます！Junichiro Kohariと申します。</p>
-					<p>大阪府内でSEとして働くかたわら、Web制作のお仕事も行っております。</p>
-					<p>このブログではIT業界で働く僕が、ITの技術や日々の業務で学んだこと、プライベートでやっている趣味に関することを発信していきます。</p>
+					<p>ご訪問ありがとうございます！Junichiro Kohariと申します。<br>大阪府内でSEとして働くかたわら、Web制作のお仕事も行っております。<br>このブログではIT業界で働く僕が、ITの技術や日々の業務で学んだこと、プライベートでやっている趣味に関することを発信していきます。</p>
 					<p class="last-txt">詳しいプロフィールは<a href="#" class="link-to-profile">こちら</a></p>
 				</div>
 			</div>
