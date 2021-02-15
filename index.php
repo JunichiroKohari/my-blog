@@ -45,14 +45,12 @@
     <div class="ad-placeholder">広告</div>
     <div class="main-and-aside">
         <main class="main">
-            <?php if (have_posts()) : ?>
-                <?php while ( have_posts() ) : the_post(); ?>
+            <?php if (have_posts()) : while ( have_posts() ) : the_post(); ?>
                 <div class="new-articles sp-version-article">
                     <article id="post-<?php the_ID(); ?>" <?php post_class('news'); ?>>
                         <div class="article-left-div">
                             <a href="<?php the_permalink(); ?>" class="thumbnail-link">
-                                <?php if (has_post_thumbnail()): ?>
-                                    <?php the_post_thumbnail( 'medium' ) ?>
+                                <?php if (has_post_thumbnail()) : the_post_thumbnail( 'medium' ) ?>
                                 <?php else: ?>
                                     <img src="<?php echo get_template_directory_uri(); ?>/img/no-image.png" alt="サムネイル画像なし" class="wp-post-image">
                                 <?php endif; ?>
@@ -74,10 +72,7 @@
                     </article>
                 </div>
                 <?php endwhile; ?>
-                <?php
-                    if( function_exists('pagenation') ){
-                        pagenation();
-                }?>
+                <?php if( function_exists('pagenation') ) : pagenation(); endif; ?>
             <?php endif; ?>
         </main>
         <?php get_sidebar(); ?>
