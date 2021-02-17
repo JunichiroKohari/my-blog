@@ -25,7 +25,7 @@
 		<?php if ( has_nav_menu( 'global' ) ) : ?>
 			<?php wp_nav_menu( array(
 				'theme_location'  => 'global',
-				'menu_id' 		  => 'global-menu',
+				'menu_id' 		  => 'header-menu',
 				'container' 	  => 'nav',
 				'container_class' => 'nav'
 			) ); ?>
