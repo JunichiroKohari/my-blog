@@ -22,16 +22,14 @@
 			<span class="border"></span>
 			<span class="border"></span>
 		</div>
-		<nav class="nav">
-			<ul class="nav-ul">
-				<li class="nav-li"><a href="<?php echo esc_url( home_url() ); ?>" class="nav-link">ホーム</a></li>
-				<li class="nav-li"><a href="#about" class="nav-link">デザイン</a></li>
-				<li class="nav-li"><a href="#access" class="nav-link">Web制作</a></li>
-				<li class="nav-li"><a href="#contact" class="nav-link">プログラミング</a></li>
-				<li class="nav-li"><a href="#contact" class="nav-link">英語</a></li>
-				<li class="nav-li"><a href="#contact" class="nav-link">お問合せ</a></li>
-			</ul>
-		</nav>
+		<?php if ( has_nav_menu( 'global' ) ) : ?>
+			<?php wp_nav_menu( array(
+				'theme_location'  => 'global',
+				'menu_id' 		  => 'global-menu',
+				'container' 	  => 'nav',
+				'container_class' => 'nav'
+			) ); ?>
+		<?php endif; ?>
 		<div class="top-img-div">
 			<div class="profile-div">
 				<?php

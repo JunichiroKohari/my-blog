@@ -50,6 +50,11 @@
 
     add_action('wp_enqueue_scripts', 'add_assets');
 
+    // カスタムメニュー有効化
+    register_nav_menus( array (
+        'global' => 'Global Menu',
+    ) );
+
     // ウィジェットエリアの登録
     function sampletheme_widgets_init() {
         register_sidebar( array(

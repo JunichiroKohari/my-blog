@@ -31,28 +31,28 @@
         display: block;
         width: 100%;
     }
-    > .nav > .nav-ul {
+    > .nav > .menu {
         display: flex;
         background: #AE4C35;
     }
-    > .nav > .nav-ul > .nav-li {
+    > .nav > .menu > .menu-item {
         flex: 5;
-        padding: 1.5em 2em;
         text-align: center;
         transition: all 0.3s;
     }
-    > .nav > .nav-ul > .nav-li > .nav-link {
+    > .nav > .menu > .menu-item > a {
         display: block;
+        padding: 1em;
         color: #fff;
         font-size: calc(1rem + .4vw);
         font-weight: 500;
         white-space: nowrap;
         transition: all 0.3s;
     }
-    > .nav > .nav-ul > .nav-li:hover {
+    > .nav > .menu > .menu-item:hover {
         background: #fff;
 
-            .nav-link {
+            a {
                 color: #AE4C35;
             }
     }
@@ -115,9 +115,6 @@
 @media screen and (max-width: 960px) {
     .header {
 
-        > .nav > .nav-ul > .nav-li {
-            padding: 1em;
-        }
         > .top-img-div > .profile-div {
             width: 90%;
         }
@@ -206,7 +203,7 @@
             width: 100%;
             z-index: 2;
         }
-        .nav > .nav-ul {
+        .nav > .menu {
             display: flex;
             flex-flow: column;
         }
@@ -217,11 +214,11 @@
             width: 100%;
 
         }
-        .hamb-nav > .nav-ul {
+        .hamb-nav > .menu {
             flex-flow: column;
             margin-top: 7em;
         }
-        .hamb-nav > .nav-ul > .nav-li > .nav-link {
+        .hamb-nav > .menu > .menu-item > a {
             display: block;
             padding: 12px 0;
             padding-right: .28em;
