@@ -79,5 +79,4 @@
     </div><!-- main-and-aside -->
 </div><!-- contents -->
 
-
 <?php get_footer(); ?>
