@@ -131,6 +131,7 @@ main {
         display: flex;
     }
     > .post > .article-left-div {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -152,6 +153,9 @@ main {
         color: black;
     }
     > .post > .article-right-div > .article-metainfo > .time-div >.postedtime {
+        margin: 0 10px 0 0;
+    }
+    > .post > .article-right-div > .article-metainfo > .cat-and-tag-div > .category {
         margin: 0 10px 0 0;
     }
     > .post > .article-right-div > .post-description {
@@ -207,6 +211,7 @@ main {
     .article-metainfo {
         display: flex;
         margin: 5px 0;
+        font-size: 12px;
     }
 }
 @media screen and (max-width: 560px) {

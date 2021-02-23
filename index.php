@@ -10,7 +10,7 @@
                     <h2 class="article-title">テスト記事</h2>
                     <div class="article-metainfo">
                         <div class="time">
-                            <i class="far fa-calendar-alt"></i><time class="postedtime" datetime="2020-01-12">2020年1月12日</time>
+                            <i class="fas fa-calendar-alt"></i><time class="postedtime" datetime="2020-01-12">2020年1月12日</time>
                         </div>
                         <a href="#" class="category">プログラミング</a>
                     </div>
@@ -22,7 +22,7 @@
                     <h2 class="article-title">テスト記事</h2>
                     <div class="article-metainfo">
                         <div class="time">
-                            <i class="far fa-calendar-alt"></i><time class="postedtime" datetime="2020-01-12">2020年1月12日</time>
+                            <i class="fas fa-calendar-alt"></i><time class="postedtime" datetime="2020-01-12">2020年1月12日</time>
                         </div>
                         <a href="#" class="category">プログラミング</a>
                     </div>
@@ -34,7 +34,7 @@
                     <h2 class="article-title">テスト記事</h2>
                     <div class="article-metainfo">
                         <div class="time">
-                            <i class="far fa-calendar-alt"></i><time class="postedtime" datetime="2020-01-12">2020年1月12日</time>
+                            <i class="fas fa-calendar-alt"></i><time class="postedtime" datetime="2020-01-12">2020年1月12日</time>
                         </div>
                         <a href="#" class="category">プログラミング</a>
                     </div>
@@ -60,10 +60,15 @@
                             <h2 class="article-title"><a href="<?php the_permalink(); ?>" class="article-title-link"><?php the_title(); ?></a></h2>
                             <div class="article-metainfo">
                                 <div class="time-div">
-                                    <i class="far fa-calendar-alt"></i>
+                                    <i class="fas fa-calendar-alt"></i>
                                     <time class="postedtime" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y年m月d日'); ?></time>
                                 </div>
-                                <?php the_category(); ?>
+                                <div class="cat-and-tag-div">
+                                    <i class="fas fa-folder-open"></i>
+                                    <?php the_category( ' ' ); ?>
+                                    <i class="fas fa-tag"></i>
+                                    <?php the_tags( ' ' ); ?>
+                                </div>
                             </div>
                             <div class="post-description">
                                 <?php the_excerpt(); ?>

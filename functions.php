@@ -73,6 +73,13 @@
     // アイキャッチ画像を有効化
     add_theme_support( 'post-thumbnails' );
 
+    // カテゴリ出力形式カスタマイズ
+    function user_override_the_category( $html ) {
+        $html = preg_replace( '~a href="(' . esc_url( get_home_url() ) . '/category/(.+?)/)"~', 'a href="\1" class="category"', $html );
+        return $html;
+    }
+    add_filter( 'the_category', 'user_override_the_category', 10, 1 );
+
     /* 人気記事一覧 */
     // 人気記事出力
     function getPostViews($postID){
