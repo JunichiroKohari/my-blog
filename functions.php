@@ -12,6 +12,13 @@
         //     array(),
         //     '1.8.1'
         // );
+        // fontawesome
+        wp_enqueue_style(
+            'fontawesome',
+            '//use.fontawesome.com/releases/v5.0.6/css/all.css',
+            array(),
+            '5.0.6'
+        );
         // my css
         wp_enqueue_style(
             'my-style',
