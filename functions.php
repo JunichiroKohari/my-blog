@@ -186,3 +186,20 @@
             echo "</div>\n";
         }
     }
+
+    // コメント欄のメールアドレス入力欄、サイト入力欄削除
+    function my_comment_form_remove($arg) {
+        unset($arg['email']);
+        unset($arg['url']);
+        unset($arg['cookies']);
+        return $arg;
+    }
+    add_filter('comment_form_default_fields', 'my_comment_form_remove');
+    //コメント文言を変更
+    function custom_comment_form($args) {
+        $args['comment_notes_before'] = '';
+        $args['comment_notes_after'] = '';
+        $args['label_submit'] = '送信';
+        return $args;
+    }
+    add_filter('comment_form_defaults', 'custom_comment_form');
