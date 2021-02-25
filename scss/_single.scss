@@ -37,7 +37,7 @@
         align-items: center;
         max-width: 40%;
         position: relative;
-        border: 1px solid gray;
+        border: 1px solid #8C9BB0;
         border-radius: 5px;
         font-size: calc(1rem + .15vw);
     }
@@ -64,5 +64,25 @@
         right: 1em;
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
+    }
+    > main > .commentlist {
+        margin: 1em 0;
+    }
+    > main > .comment-respond > .comment-form > p > label {
+        display: block;
+        font-size: calc(1.2rem + .2vw);
+        margin: 1em 0 .5em 0;
+    }
+    > main > .comment-respond > .comment-form > .comment-form-author > input[type="text"] {
+        padding: 8px 15px;
+        border: 1px solid #8C9BB0;
+    }
+    > main > .comment-respond > .comment-form > .form-submit > .submit {
+        margin: 2em 0 0 0;
+        padding: .2em 2em;
+        border: 1px solid #64b6ed;
+        border-radius: 5px;
+        color: #ffffff;
+        background: #64b6ed;
     }
 }

@@ -204,6 +204,7 @@
     add_filter('comment_form_default_fields', 'my_comment_form_remove');
     //コメント文言を変更
     function custom_comment_form($args) {
+        $args['title_reply'] = '';
         $args['comment_notes_before'] = '';
         $args['comment_notes_after'] = '';
         $args['label_submit'] = '送信';
