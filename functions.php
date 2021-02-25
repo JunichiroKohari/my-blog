@@ -198,7 +198,7 @@
     function my_comment_form_remove($arg) {
         unset($arg['email']);
         unset($arg['url']);
-        unset($arg['cookies']);
+        // unset($arg['cookies']);
         return $arg;
     }
     add_filter('comment_form_default_fields', 'my_comment_form_remove');

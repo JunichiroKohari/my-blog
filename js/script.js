@@ -8,6 +8,9 @@ $('.nav-link').on('click', function() {
     $('.nav').toggleClass('hamb-nav');
 });
 
+/* コメント欄名前必須チェック */
+$('#submit').attr('required', true);
+
 /* スライダー */
 // $('.slider').slick({
 //   infinite: true,
