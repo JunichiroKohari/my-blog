@@ -25,7 +25,10 @@
         line-height: 1.7em;
     }
     > main > .post-navigation {
-        margin: 1em 0;
+        margin: 5em 0;
+    }
+    > main > #comments {
+        font-size: calc(1.2rem + .3vw);
     }
     > main > .post-navigation > .nav-links {
         display: flex;
@@ -67,10 +70,38 @@
     }
     > main > .commentlist {
         margin: 1em 0;
+        padding: 1em 2em;
         background: #E5F3FF;
     }
-    > main > .commentlist {
-        padding: 1em 2em;
+    .comment-body {
+        margin: 2em 0;
+        padding: 2em;
+        border: 1px solid #8C9BB0;
+        border-radius: 5px;
+    }
+    .comment-body > .comment-author {
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+    }
+    .comment-body > .comment-author > .fn {
+        margin: 0 2em;
+    }
+    .comment-body > .comment-author > .says {
+        display: none;
+    }
+    .comment-body > .comment-meta {
+        text-align: end;
+    }
+    .comment-body > p {
+        padding: 1em;
+        border: 1px solid #8C9BB0;
+        border-radius: 5px;
+        background: #ffffff;
+    }
+    .comment-body > .reply > a {
+        display: block;
+        padding: 1em 0 0 0;
     }
     > main > .comment-respond > .comment-form > p > label {
         display: block;
@@ -91,5 +122,11 @@
         border-radius: 5px;
         color: #ffffff;
         background: #64b6ed;
+        cursor: pointer;
+        transition: all .3s;
     }
+    > main > .comment-respond > .comment-form > .form-submit > .submit:hover {
+        opacity: .5;
+    }
+
 }

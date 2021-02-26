@@ -8,7 +8,8 @@ $('.nav-link').on('click', function() {
     $('.nav').toggleClass('hamb-nav');
 });
 
-/* コメント欄名前必須チェック */
+/* コメント欄 */
+// コメント欄名前必須チェック
 $('#submit').attr('required', true);
 
 /* スライダー */
