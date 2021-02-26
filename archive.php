@@ -1,57 +1,46 @@
 <?php get_header(); ?>
 
-	<div class="page-title">
-		<h1><?php the_archive_title(); ?></h1>
-	</div>
-
-	<div class="content-area has-side-col">
-		<div class="main-column">
-			<h1 class="box-heading box-heading-main-col"><?php the_archive_title(); ?></h1>
-			<div class="box-content">
-
-				<?php if ( have_posts() ) : ?>
-
-					<ul class="archive">
-
-						<?php while ( have_posts() ) : ?>
-
-						<?php the_post(); ?>
-
-							<li class="item-archive">
-								<div class="time-and-thumb-archive">
-									<time class="pub-date" datetime="<?php echo get_the_date( DATE_W3C ); ?>"><?php echo get_the_date(); ?></time>
-									<?php if ( has_post_thumbnail() ) : ?>
-										<p class="thumb thumb-archive"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'easiestwp-thumbnail' ); ?></a></p>
-									<?php endif; ?>
+<div class="contents">
+	<div class="main-and-aside">
+		<main class="main">
+			<div class="archive-title"><h2><?php the_archive_title() ?></h2></div>
+			<?php if (have_posts()) : while ( have_posts() ) : the_post(); ?>
+				<div class="new-articles sp-version-article">
+					<article id="post-<?php the_ID(); ?>" <?php post_class('news'); ?>>
+						<div class="article-left-div">
+							<a href="<?php the_permalink(); ?>" class="thumbnail-link">
+								<?php if (has_post_thumbnail()) : the_post_thumbnail( 'medium' ) ?>
+								<?php else: ?>
+									<img src="<?php echo esc_url( get_template_directory_uri() . '/img/no-image.png' ); ?>" alt="サムネイル画像なし" class="wp-post-image">
+								<?php endif; ?>
+							</a>
+						</div>
+						<div class="article-right-div">
+							<h2 class="article-title"><a href="<?php the_permalink(); ?>" class="article-title-link"><?php the_title(); ?></a></h2>
+							<div class="article-metainfo">
+								<div class="time-div">
+									<i class="fas fa-calendar-alt"></i>
+									<time class="postedtime" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y年m月d日'); ?></time>
 								</div>
-								<div class="data-archive">
-									<p class="list-categories-archive"><?php the_category( ', ' ); ?></p>
-									<h2 class="title-archive"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-									<p class="list-tags-archive"><?php the_tags(); ?></p>
+								<div class="cat-and-tag-div">
+									<i class="fas fa-folder-open"></i>
+									<?php the_category( ' ' ); ?>
+									<i class="fas fa-tag"></i>
+									<?php the_tags( ' ' ); ?>
 								</div>
-							</li>
-
-						<?php endwhile; ?>
-
-					</ul>
-
-				<?php else : ?>
-
-					<p>投稿がありません。</p>
-
-				<?php endif; ?>
-
-			</div>
-
-			<?php the_posts_pagination( array(
-				'prev_text' => '<img class="arrow" src="' . get_theme_file_uri() . '/images/arrow-left.png" srcset="' . get_theme_file_uri() . '/images/arrow-left@2x.png 2x" alt="前へ">',
-				'next_text' => '<img class="arrow" src="' . get_theme_file_uri() . '/images/arrow-right.png" srcset="' . get_theme_file_uri() . '/images/arrow-right@2x.png 2x" alt="次へ">',
-			) ); ?>
-
-		</div>
-
-		<?php get_sidebar(); ?>
-
+							</div>
+							<div class="post-description">
+								<?php the_excerpt(); ?>
+							</div>
+						</div>
+					</article>
+				</div>
+				<?php endwhile; ?>
+            <?php if( function_exists('pagenation') ) : pagenation(); endif; ?>
+            <?php endif; ?>
+		</main>
+	<?php get_sidebar(); ?>
 	</div>
+</div>
 
 <?php get_footer();
