@@ -1,5 +1,5 @@
 .article-page {
-    margin: 60px;
+    margin: 60px 0;
 }
 .main-and-aside {
 
@@ -109,7 +109,7 @@
 
     }
     > main > .comment-respond > .comment-reply-title {
-        font-size: calc(1.2rem + .3vw);
+        font-size: calc(1.2rem + .1vw);
         background: inherit;
     }
     > main > .comment-respond > .comment-reply-title::before {
@@ -216,6 +216,10 @@ h6 {
     // 画像
     img {
         margin: 1em 0;
+    }
+    // 動画
+    video {
+        cursor: pointer;
     }
     // 段落
     p {
