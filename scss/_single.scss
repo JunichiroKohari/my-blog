@@ -11,9 +11,6 @@
         width: 100%;
         margin: 0 0 60px 0;
     }
-    > main > .article-title {
-        font-size: calc(2rem + 1vw);
-    }
     > main > .article-metainfo {
         margin: 1em 0;
     }
@@ -29,6 +26,10 @@
     }
     > main > #comments {
         font-size: calc(1.2rem + .3vw);
+        background: inherit;
+    }
+    > main > #comments::before {
+        background: inherit;
     }
     > main > .post-navigation > .nav-links {
         display: flex;
@@ -71,7 +72,8 @@
     > main > .commentlist {
         margin: 1em 0;
         padding: 1em 2em;
-        background: #E5F3FF;
+        border-radius: 5px;
+        background: #e0f3ff;
     }
     .comment-body {
         margin: 2em 0;
@@ -102,6 +104,13 @@
     .comment-body > .reply > a {
         display: block;
         padding: 1em 0 0 0;
+
+    }
+    > main > .comment-respond > .comment-reply-title {
+        background: inherit;
+    }
+    > main > .comment-respond > .comment-reply-title::before {
+        background: inherit;
     }
     > main > .comment-respond > .comment-form > p > label {
         display: block;
@@ -109,6 +118,7 @@
         margin: 1em 0 .5em 0;
     }
     > main > .comment-respond > .comment-form > .comment-form-comment > textarea {
+        width: 60%;
         padding: 8px 15px;
     }
     > main > .comment-respond > .comment-form > .comment-form-author > input[type="text"] {
@@ -128,5 +138,135 @@
     > main > .comment-respond > .comment-form > .form-submit > .submit:hover {
         opacity: .5;
     }
+}
 
+/* 小見出し、引用文、強調文　等 */
+h2 {
+    font-size: calc(2rem + 1vw);
+    font-weight: 500;
+}
+h3 {
+    position: relative;
+    border-radius: 0 10px 10px;
+    color: #333;
+    font-size: calc(2rem + .8vw);
+    font-weight: 500;
+    text-shadow: 0 0 2px white;
+    background: #e0f3ff;
+    z-index: -4;
+}
+h3:before {
+    content: "";
+    position: absolute;
+    background: #9de5ff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 50%;
+    left: -15px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: -1;
+}
+h4 {
+    position: relative;
+    color: #333;
+    font-size: calc(2rem + .6vw);
+    font-weight: 500;
+    text-shadow: 0 0 2px white;
+}
+h4:before {
+    content: "";
+    position: absolute;
+    background: #9de5ff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 50%;
+    /* border: dashed 1px white; */
+    left: -15px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: -1;
+}
+h5 {
+    font-size: calc(2rem + .4vw);
+    font-weight: 500;
+    border-bottom: 1px solid #64b6ed;
+    padding: 0 0 3px 0;
+}
+h6 {
+    font-size: calc(2rem + .2vw);
+    font-weight: 500;
+}
+.article {
+
+    // リスト
+    ul {
+        margin: 0 0 0 2em;
+
+        > li {
+            list-style: inside;
+        }
+    }
+    // 引用文
+    blockquote {
+        position: relative;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        font-style: italic;
+        color: #4e4e4e;
+        background: #f2f9ff;
+    }
+    blockquote:before{
+        display: inline-block;
+        position: absolute;
+        top: 7px;
+        left: 10px;
+        content: "\f10d";
+        font-family: FontAwesome;
+        color: #d2e6ff;
+        font-size: 58px;
+        line-height: 1;
+        font-weight: 900;
+    }
+    blockquote:after{
+        display: inline-block;
+        position: absolute;
+        bottom: 5px;
+        right: 15px;
+        text-align: center;
+        content: "\f10e";
+        font-family: FontAwesome;
+        color: #d2e6ff;
+        font-size: 40px;
+        line-height: 1;
+        font-weight: 900;
+    }
+    blockquote > p {
+        position: relative;
+        padding: 0;
+        margin: 10px 0;
+        z-index: 3;
+        line-height: 1.7;
+    }
+    blockquote > cite {
+        position: relative;
+        z-index: 3;
+        display: block;
+        text-align: right;
+        color: #888888;
+        font-size: 0.9em;
+    }
+    // テーブル
+    table > tbody > tr > td {
+        border: 1px solid #8C9BB0;
+    }
+    figcaption {
+        font-size: 1.2rem;
+    }
+    // 強調（em）
+    em {
+        font-style: italic;
+    }
 }
