@@ -109,6 +109,7 @@
 
     }
     > main > .comment-respond > .comment-reply-title {
+        font-size: calc(1.2rem + .3vw);
         background: inherit;
     }
     > main > .comment-respond > .comment-reply-title::before {
@@ -222,7 +223,7 @@ h6 {
     }
     // リスト
     ul {
-        margin: 0 0 0 2em;
+        margin: 1em 0 1em 2em;
 
         > li {
             list-style: inside;
@@ -279,6 +280,9 @@ h6 {
         font-size: 0.9em;
     }
     // テーブル
+    figure {
+        margin: 1em 0;
+    }
     table > tbody > tr > td {
         border: 1px solid #8C9BB0;
     }
