@@ -1,5 +1,4 @@
 .main-and-aside {
-    margin: 60px 0;
 
     > main > .eyecatch-div {
         display: block;
@@ -148,7 +147,8 @@
     }
 }
 
-/* 小見出し、引用文、強調文　等 */
+/* 小見出し、画像、段落　等 */
+// 小見出し
 h2 {
     font-size: calc(2rem + 1vw);
     font-weight: 500;
