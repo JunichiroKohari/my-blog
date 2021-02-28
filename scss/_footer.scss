@@ -17,12 +17,15 @@ footer {
     > .category-and-archive {
         display: none;
     }
+    > nav {
+        width: 80%;
+    }
     > nav > .menu {
         display: flex;
         justify-content: center;
     }
     > nav > .menu > .menu-item {
-        margin: 0 40px;
+        width: calc(100% / 6);
     }
     > nav > .menu > .menu-item > a {
         color: #ffffff;
