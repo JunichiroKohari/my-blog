@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="contents">
-	<div class="main-and-aside">
+	<div class="main-and-aside article-page">
 		<main class="main">
 		<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>
