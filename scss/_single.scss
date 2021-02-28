@@ -139,6 +139,14 @@
         opacity: .5;
     }
 }
+@media screen and (max-width: 560px) {
+    .main-and-aside {
+
+        > main > .comment-respond > .comment-form > .comment-form-comment > textarea {
+            width: 100%;
+        }
+    }
+}
 
 /* 小見出し、引用文、強調文　等 */
 h2 {
@@ -201,6 +209,14 @@ h6 {
 }
 .article {
 
+    // 画像
+    img {
+        margin: 1em 0;
+    }
+    // 段落
+    p {
+        margin: 1em 0;
+    }
     // リスト
     ul {
         margin: 0 0 0 2em;
@@ -212,6 +228,7 @@ h6 {
     // 引用文
     blockquote {
         position: relative;
+        margin: 1em 0;
         padding: 10px 20px;
         box-sizing: border-box;
         font-style: italic;

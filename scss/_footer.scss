@@ -18,10 +18,11 @@ footer {
         display: none;
     }
     > nav {
-        width: 80%;
+        width: 85%;
     }
     > nav > .menu {
         display: flex;
+        align-items: center;
         justify-content: center;
     }
     > nav > .menu > .menu-item {
@@ -82,6 +83,7 @@ footer:before{
             flex-flow: column;
         }
         > nav > .menu > .menu-item {
+            width: 100%;
             margin: .6em 0;
         }
     }
