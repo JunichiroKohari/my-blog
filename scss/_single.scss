@@ -13,6 +13,10 @@
         width: 100%;
         margin: 0 0 60px 0;
     }
+    > main > .article-title {
+        font-size: calc(2rem + 1vw);
+        font-weight: 500;
+    }
     > main > .article-metainfo {
         margin: 1em 0;
         font-size: 1.3rem;
