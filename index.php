@@ -12,7 +12,10 @@
                         <div class="time">
                             <i class="fas fa-calendar-alt"></i><time class="postedtime" datetime="2020-01-12">2020年1月12日</time>
                         </div>
-                        <a href="#" class="category">プログラミング</a>
+                        <div class="category-div">
+                            <i class="fas fa-folder-open"></i>
+                            <a href="#" class="category">プログラミング</a>
+                        </div>
                     </div>
                 </article>
             </li>
@@ -24,7 +27,10 @@
                         <div class="time">
                             <i class="fas fa-calendar-alt"></i><time class="postedtime" datetime="2020-01-12">2020年1月12日</time>
                         </div>
-                        <a href="#" class="category">プログラミング</a>
+                        <div class="category-div">
+                            <i class="fas fa-folder-open"></i>
+                            <a href="#" class="category">プログラミング</a>
+                        </div>
                     </div>
                 </article>
             </li>
@@ -36,7 +42,10 @@
                         <div class="time">
                             <i class="fas fa-calendar-alt"></i><time class="postedtime" datetime="2020-01-12">2020年1月12日</time>
                         </div>
-                        <a href="#" class="category">プログラミング</a>
+                        <div class="category-div">
+                            <i class="fas fa-folder-open"></i>
+                            <a href="#" class="category">プログラミング</a>
+                        </div>
                     </div>
                 </article>
             </li>

@@ -81,6 +81,7 @@ input[type="text"], textarea {
     }
     > .popular-articles > .popular-articles-ul > .popular-article-li > .popular-article > .article-metainfo {
         display: flex;
+        flex-flow: column;
         justify-content: space-between;
     }
     > .popular-articles > .popular-articles-ul > .popular-article-li > .popular-article > .article-metainfo > .time > .postedtime {
@@ -228,6 +229,7 @@ main {
             font-weight: 500;
         }
         .article-metainfo {
+            flex-flow: column;
             justify-content: space-between;
             margin: 0 0 0.8em 0;
         }
