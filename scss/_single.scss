@@ -87,6 +87,7 @@
         padding: 2em;
         border: 1px solid #8C9BB0;
         border-radius: 5px;
+        background: #ffffff;
     }
     .comment-body > .comment-author {
         display: flex;
@@ -104,13 +105,14 @@
     }
     .comment-body > p {
         padding: 1em;
-        border: 1px solid #8C9BB0;
         border-radius: 5px;
-        background: #ffffff;
+        font-size: 1.4rem;
+        background: #e0f3ff;
     }
     .comment-body > .reply > a {
         display: block;
         padding: 1em 0 0 0;
+        font-size: 1.2rem;
     }
     > main > .comment-respond > .comment-reply-title {
         font-size: calc(1.2rem + .1vw);
