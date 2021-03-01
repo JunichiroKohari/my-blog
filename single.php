@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="contents">
-	<div class="main-and-aside article-page">
+	<div class="main-and-aside margin-from-header">
 		<main class="main">
 		<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>

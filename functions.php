@@ -148,6 +148,7 @@
         return '  …  <a href="'. get_permalink($post->ID) . '">' . '続きを読む' . '</a>';
     }
     add_filter('excerpt_more', 'new_excerpt_more');
+
     //　抜粋文字数設定
     function twpp_change_excerpt_length( $length ) {
         return 45;
@@ -202,6 +203,7 @@
         return $arg;
     }
     add_filter('comment_form_default_fields', 'my_comment_form_remove');
+
     //コメント文言を変更
     function custom_comment_form($args) {
         $args['title_reply'] = '';
@@ -211,3 +213,19 @@
         return $args;
     }
     add_filter('comment_form_defaults', 'custom_comment_form');
+
+    /* アーカイブページ */
+    function my_archive_title($title) {
+        if ( is_category() ) {
+            $title = single_cat_title( '', false );
+        } elseif ( is_tag() ) {
+            $title = single_tag_title( '', false );
+        } elseif ( is_post_type_archive() ) {
+            $title = post_type_archive_title( '', false );
+        } elseif (is_date()) {
+            $title = get_the_time('Y年n月');
+        }
+        $title .= 'の記事一覧';
+        return $title;
+    };
+    add_filter( 'get_the_archive_title', 'my_archive_title');

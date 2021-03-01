@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="contents">
-	<div class="main-and-aside">
+	<div class="main-and-aside margin-from-header">
 		<main class="main">
 			<div class="archive-title"><h2><?php the_archive_title() ?></h2></div>
 			<?php if (have_posts()) : while ( have_posts() ) : the_post(); ?>
