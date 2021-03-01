@@ -125,7 +125,7 @@
 
         > .title-div{
             position: fixed;
-            height: 50px;
+            height: 53px;
             padding: .5vh 1vw;
             background: #AE4C35;
             align-items: center;
@@ -148,7 +148,7 @@
             flex-flow: column nowrap;
             justify-content: space-around;
             position: fixed;
-            top: 8px;
+            top: 9px;
             right: 0;
             margin: 5px;
             margin-top: -9px;
@@ -216,7 +216,11 @@
         }
         .hamb-nav > .menu {
             flex-flow: column;
+            align-items: center;
             margin-top: 7em;
+        }
+        .hamb-nav > .menu > .menu-item {
+            width: 100%;
         }
         .hamb-nav > .menu > .menu-item > a {
             display: block;
@@ -226,7 +230,7 @@
             font-weight: 400;
         }
         .hamb-nav > .menu > .menu-item:last-child > a {
-            padding-bottom: 2em;
+            padding-bottom: 1.5em;
         }
     }
 }
