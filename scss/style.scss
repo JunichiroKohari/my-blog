@@ -47,7 +47,7 @@ input[type="text"], textarea {
 .contents {
     display: flex;
     flex-flow: column;
-    width: 70%;
+    width: 75%;
     margin: 0 auto;
 
     > .popular-articles {
@@ -126,7 +126,7 @@ input[type="text"], textarea {
     }
 }
 main {
-    flex: 7.5;
+    flex-basis: calc(100% - 300px);
 }
 .new-articles {
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
@@ -183,7 +183,17 @@ main {
     color: #fff;
     font-size: 1.2rem;
 }
+@media screen and (max-width: 960px) {
+    main {
+        flex-basis: auto;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
 @media screen and (max-width: 560px) {
+    main {
+        width: 95%;
+    }
     .new-articles{
         margin: 0 0 25px;
         border-top: 0;

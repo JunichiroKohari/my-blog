@@ -5,11 +5,6 @@
 		<main class="main">
 		<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>
-			<?php if ( has_post_thumbnail() ) : ?>
-				<div class="eyecatch-div">
-					<?php the_post_thumbnail( 'large' ); ?>
-				</div>
-			<?php endif; ?>
 			<h2 class="article-title"><?php the_title(); ?></h1>
 			<div class="article-metainfo">
 				<div class="time-div">
@@ -23,6 +18,11 @@
 					<?php the_tags( ' ' ); ?>
 				</div>
 			</div>
+			<?php if ( has_post_thumbnail() ) : ?>
+				<div class="eyecatch-div">
+					<?php the_post_thumbnail( 'large' ); ?>
+				</div>
+			<?php endif; ?>
 			<article class="article">
 				<?php the_content(); ?>
 			</article>

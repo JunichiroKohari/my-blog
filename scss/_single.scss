@@ -223,6 +223,11 @@
         font-size: calc(2rem + .2vw);
         font-weight: 500;
     }
+    // 画像
+    img {
+        display: block;
+        margin: 0 auto;
+    }
     // 動画
     video {
         cursor: pointer;
