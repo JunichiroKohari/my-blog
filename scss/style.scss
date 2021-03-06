@@ -47,7 +47,8 @@ input[type="text"], textarea {
 .contents {
     display: flex;
     flex-flow: column;
-    width: 75%;
+    width: 90%;
+    max-width: 1150px;
     margin: 0 auto;
 
     > .popular-articles {
@@ -64,7 +65,7 @@ input[type="text"], textarea {
         justify-content: space-between;
     }
     > .popular-articles > .popular-articles-ul > .popular-article-li {
-        width: 19vw;
+        width: 30%;
         min-width: 215px;
         padding: 1em;
         background: #F5ECEC;
@@ -105,9 +106,11 @@ input[type="text"], textarea {
         width: 90%;
 
         > .popular-articles > .popular-articles-ul {
-            justify-content: space-evenly;
+            justify-content: space-between;
         }
-
+        > .popular-articles > .popular-articles-ul > .popular-article-li {
+            min-width: 45%;
+        }
         > .popular-articles > .popular-articles-ul > .popular-article-right {
             display: none;
         }
@@ -117,7 +120,7 @@ input[type="text"], textarea {
     .contents {
 
         > .popular-articles > .popular-articles-ul > .popular-article-li {
-            min-width: 90%;
+            min-width: 100%;
             width: auto;
         }
         > .popular-articles > .popular-articles-ul > .popular-article-center {
@@ -186,7 +189,7 @@ main {
 @media screen and (max-width: 960px) {
     main {
         flex-basis: auto;
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
     }
 }
