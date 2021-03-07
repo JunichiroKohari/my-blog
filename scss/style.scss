@@ -74,6 +74,8 @@ input[type="text"], textarea {
     > .popular-articles > .popular-articles-ul > .popular-article-li > .popular-article > .thumbnail-img {
         display: block;
         width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
     }
     > .popular-articles > .popular-articles-ul > .popular-article-li > .popular-article > .article-title {
         padding: 1em 0;
@@ -99,6 +101,7 @@ input[type="text"], textarea {
     }
     > .main-and-aside {
         display: flex;
+        justify-content: space-between;
     }
 }
 @media screen and (max-width: 960px) {
@@ -129,7 +132,7 @@ input[type="text"], textarea {
     }
 }
 main {
-    flex-basis: calc(100% - 300px);
+    flex-basis: calc(100% - 330px);
 }
 .new-articles {
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
@@ -194,9 +197,6 @@ main {
     }
 }
 @media screen and (max-width: 560px) {
-    main {
-        width: 95%;
-    }
     .new-articles{
         margin: 0 0 25px;
         border-top: 0;
