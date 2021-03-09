@@ -2,7 +2,7 @@
 
 <div class="contents">
     <div class="popular-articles">
-        <h2 class="popular-article-heading">👑 人気記事　👑</h2>
+        <h2 class="popular-article-heading">👑 人気記事 👑</h2>
         <ul class="popular-articles-ul">
             <li class="popular-article-li sp-version-article">
                 <article class="popular-article">
