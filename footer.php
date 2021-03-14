@@ -19,12 +19,6 @@
                 <?php wp_get_archives('type=monthly&format=option&show_post_count=1'); ?>
             </select>
         </form>
-        <!-- <ul class="footer-ul">
-            <li class="footer-li"><a href="#" class="footer-link">ホーム</a></li>
-            <li class="footer-li"><a href="#" class="footer-link">プロフィール</a></li>
-            <li class="footer-li"><a href="#" class="footer-link">プライバシーポリシー</a></li>
-            <li class="footer-li"><a href="#" class="footer-link">お問合せ</a></li>
-        </ul> -->
         <?php if ( has_nav_menu( 'global' ) ) : ?>
 			<?php wp_nav_menu( array(
 				'theme_location'  => 'global',
@@ -33,7 +27,7 @@
 				'container_class' => 'nav'
 			) ); ?>
 		<?php endif; ?>
-        <small class="copyright">COPYRIGHT© リーダブルブログ ALL RIGHTS RESERVED.  -  <?php echo date('Y'); ?></small>
+        <small class="copyright">COPYRIGHT© 一方、IT業界では ALL RIGHTS RESERVED.  -  <?php echo date('Y'); ?></small>
     </footer>
 </div><!-- #wrapper -->
 
