@@ -2,7 +2,6 @@
     margin: 60px 0;
 }
 .main-and-aside {
-
     > main > .eyecatch-div {
         display: block;
         align-items: center;
@@ -186,7 +185,6 @@
         border-radius: 50%;
         top: 50%;
         left: -15px;
-        -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
         z-index: -1;
     }
@@ -207,7 +205,6 @@
         border-radius: 50%;
         top: 50%;
         left: -15px;
-        -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
         z-index: -1;
     }

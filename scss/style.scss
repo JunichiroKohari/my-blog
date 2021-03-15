@@ -8,8 +8,7 @@ Version: 1.0
 */
 
 @charset "UTF-8";
-@import 'reset';
-@import 'header', 'footer', 'sidebar', 'single';
+@import 'reset', 'header', 'footer', 'sidebar', 'single';
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700,900&display=swap');
 
 /* 初期設定 */
@@ -45,7 +44,6 @@ input[type="text"], textarea {
 
 /* 記事 */
 #wrapper {
-
     > .popular-articles {
         width: 90%;
         max-width: 1150px;
@@ -108,7 +106,6 @@ input[type="text"], textarea {
 }
 @media screen and (max-width: 960px) {
     #wrapper {
-
         > .popular-articles > .popular-articles-ul {
             justify-content: space-between;
         }
@@ -122,7 +119,6 @@ input[type="text"], textarea {
 }
 @media screen and (max-width: 560px) {
     #wrapper {
-
         > .popular-articles > .popular-articles-ul > .popular-article-li {
             min-width: 100%;
             width: auto;
@@ -139,7 +135,6 @@ main {
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
     margin: 0 0 5em 0;
     border-radius: 5px;
-
     > .post {
         display: flex;
     }
@@ -203,7 +198,6 @@ main {
         border-top: 0;
         background: #fff;
         cursor: pointer;
-
         > .post {
             flex-flow: column;
         }
@@ -227,7 +221,6 @@ main {
 /* SP版記事共通 */
 .sp-version-article {
     border-radius: 5px;
-
     .article-metainfo {
         display: flex;
         margin: 5px 0;
@@ -236,7 +229,6 @@ main {
 }
 @media screen and (max-width: 560px) {
     .sp-version-article {
-
         .article-title {
             padding: 1em 0;
             font-size: 2.4rem;
@@ -255,7 +247,6 @@ main {
     display: flex;
     justify-content: center;
     margin: 6em;
-
     > .pagenation-ol {
         display: flex;
         margin: 0 .5em;
