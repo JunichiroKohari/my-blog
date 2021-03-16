@@ -149,7 +149,6 @@
 }
 @media screen and (max-width: 560px) {
     .main-and-aside {
-
         > main > .comment-respond > .comment-form > .comment-form-comment > textarea {
             width: 100%;
         }
@@ -240,10 +239,9 @@
     // リスト
     ul {
         margin: 0 0 2.5em 2em;
-
-        > li {
-            list-style: inside;
-        }
+    }
+    ul > li {
+        list-style: inside;
     }
     // 引用文
     blockquote {

@@ -13,8 +13,8 @@
     }
     > .title-div:before{
         content: '';
-        background: inherit;
         filter: blur(3px);
+        background: inherit;
         position: absolute;
         top: 0px;
         left: 0px;
@@ -46,9 +46,9 @@
     }
     > .nav > .menu > .menu-item:hover {
         background: #fff;
-            a {
-                color: #AE4C35;
-            }
+    }
+    > .nav > .menu > .menu-item:hover > a {
+        color: #AE4C35;
     }
     > .top-img-div  {
         display: flex;
@@ -204,7 +204,6 @@
             top: -72px;
             right: 0;
             width: 100%;
-
         }
         .hamb-nav > .menu {
             flex-flow: column;
