@@ -132,50 +132,59 @@ main {
     flex-basis: calc(100% - 330px);
 }
 .new-articles {
+    display: flex;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
     margin: 0 0 5em 0;
     border-radius: 5px;
-    > .post {
-        display: flex;
-    }
-    > .post > .article-left-div {
+    > .article-left-div {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 3em;
     }
-    > .post > .article-left-div > .thumbnail-link > .wp-post-image {
+    > .article-left-div > .thumbnail-link > .wp-post-image {
         display: block;
         width: 100%;
     }
-    > .post > .article-right-div {
+    > .article-right-div {
+        display: flex;
+        flex-flow: column;
         width: calc(100% - 160px);
         padding: 3em 3em 3em 0;
         word-break: break-all;
     }
-    > .post > .article-right-div > .article-title {
+    > .article-right-div > .article-title {
         font-size: 2.4rem;
     }
-    > .post > .article-right-div > .article-title > .article-title-link {
+    > .article-right-div > .article-title > .article-title-link {
         color: black;
     }
-    > .post > .article-right-div > .article-metainfo > .time-div >.postedtime {
+    > .article-right-div > .article-metainfo {
+        display: flex;
+    }
+    > .article-right-div > .article-metainfo > .postedtime {
         margin: 0 10px 0 0;
     }
-    > .post > .article-right-div > .article-metainfo > .cat-and-tag-div > .category {
+    > .article-right-div > .article-metainfo > .postedtime > .fas {
+        margin: 0 5px 0 0;
+    }
+    > .article-right-div > .article-metainfo > span {
         margin: 0 10px 0 0;
     }
-    > .post > .article-right-div > .post-description {
+    > .article-right-div > .article-metainfo > span > .fas {
+        margin: 0 5px 0 0;
+    }
+    > .article-right-div > p {
         margin: 2em 0;
         font-size: 1.6rem;
         overflow-wrap: break-word;
     }
-    > .post > .article-right-div > .post-description > p > .to-article-link {
+    > .article-right-div > p > .to-article-link {
         font-size: calc(1.2rem + .2vw);
     }
 }
-.new-articles:nth-child(-n+2) > .post > .article-right-div > .article-title::before {
+.new-articles:nth-child(-n+2) > .article-right-div > .article-title::before {
     content: 'new';
     margin: 0 10px 0 0;
     padding: 2px 10px 4px 10px;
@@ -194,25 +203,23 @@ main {
 }
 @media screen and (max-width: 560px) {
     .new-articles{
+        flex-flow: column;
         margin: 0 0 25px;
         border-top: 0;
         background: #fff;
         cursor: pointer;
-        > .post {
-            flex-flow: column;
-        }
-        > .post > .article-left-div {
+        > .article-left-div {
             width: auto;
             margin: 3em 3em 0 3em;
         }
-        > .post > .article-left-div > .thumbnail-link > .wp-post-image {
+        > .article-left-div > .thumbnail-link > .wp-post-image {
             margin: 0 auto;
         }
-        > .post > .article-right-div {
+        > .article-right-div {
             width: 100%;
             padding: 0 1em 1em 1em;
         }
-        > .post > .article-right-div > .post-description {
+        > .article-right-div > .post-description {
             display: none;
         }
     }
