@@ -24,12 +24,12 @@
 			<span class="border"></span>
 		</div>
 		<?php if ( has_nav_menu( 'global' ) ) : ?>
-			<?php wp_nav_menu( array(
-				'theme_location'  => 'global',
-				'menu_id' 		  => 'header-menu',
-				'container' 	  => 'nav',
-				'container_class' => 'nav'
-			) ); ?>
+		<?php wp_nav_menu( array(
+			'theme_location'  => 'global',
+			'menu_id' 		  => 'header-menu',
+			'container' 	  => 'nav',
+			'container_class' => 'nav'
+		) ); ?>
 		<?php endif; ?>
 		<div class="top-img-div">
 			<div class="profile-div">
@@ -37,10 +37,10 @@
 					global $current_user;
 					get_currentuserinfo();
 				?>
-				<div class="profile-icon-div">
+				<figure class="profile-icon-div">
 					<img src="<?php bloginfo('template_directory'); ?>/img/profile-icon.png" class="profile-icon-img" alt="プロフィールアイコン">
-					<span class="my-name"><?php echo esc_html( $current_user->display_name ); ?></span>
-				</div>
+					<figcaption class="my-name"><?php echo esc_html( $current_user->display_name ); ?></figcaption>
+				</figure>
 				<div class="profile-txt-div">
 					<p>ご訪問ありがとうございます！<?php echo esc_html( $current_user->display_name ); ?>と申します。<br>大阪府内でSEとして働くかたわら、Web制作のお仕事も行っております。<br>このブログではIT業界で働く僕が、ITの技術や日々の業務で学んだこと、プライベートでやっている趣味に関することを発信していきます。</p>
 					<p class="last-txt">詳しいプロフィールは<a href="#" class="link-to-profile">こちら</a></p>
