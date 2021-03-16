@@ -20,7 +20,9 @@
                     <?php the_tags( ' ' ); ?>
                 </span>
             </div>
-            <?php the_excerpt(); ?>
+            <div class="excerpt">
+                <?php the_excerpt(); ?>
+            </div>
         </div>
     </article>
 <?php endwhile; ?>

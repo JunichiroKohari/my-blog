@@ -135,13 +135,14 @@ main {
     display: flex;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
     margin: 0 0 5em 0;
+    padding: 3em;
     border-radius: 5px;
     > .article-left-div {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 3em;
+        margin: 0 3em 0 0;
     }
     > .article-left-div > .thumbnail-link > .wp-post-image {
         display: block;
@@ -151,7 +152,6 @@ main {
         display: flex;
         flex-flow: column;
         width: calc(100% - 160px);
-        padding: 3em 3em 3em 0;
         word-break: break-all;
     }
     > .article-right-div > .article-title {
@@ -175,12 +175,12 @@ main {
     > .article-right-div > .article-metainfo > span > .fas {
         margin: 0 5px 0 0;
     }
-    > .article-right-div > p {
+    > .article-right-div > .excerpt {
         margin: 2em 0;
         font-size: 1.6rem;
         overflow-wrap: break-word;
     }
-    > .article-right-div > p > .to-article-link {
+    > .article-right-div > .excerpt > p > .to-article-link {
         font-size: calc(1.2rem + .2vw);
     }
 }
