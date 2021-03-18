@@ -150,29 +150,29 @@ main {
     }
     > .article-right-div {
         display: flex;
-        flex-flow: column;
+        flex-flow: row wrap;
         width: calc(100% - 160px);
         word-break: break-all;
     }
     > .article-right-div > .article-title {
+        width: 100%;
         font-size: 2.4rem;
     }
     > .article-right-div > .article-title > .article-title-link {
         color: black;
     }
-    > .article-right-div > .article-metainfo {
-        display: flex;
-    }
-    > .article-right-div > .article-metainfo > .postedtime {
+    > .article-right-div > .postedtime {
         margin: 0 10px 0 0;
+        font-size: 1.3rem;
     }
-    > .article-right-div > .article-metainfo > .postedtime > .fas {
+    > .article-right-div > .postedtime > .fas {
         margin: 0 5px 0 0;
     }
-    > .article-right-div > .article-metainfo > span {
+    > .article-right-div > span {
         margin: 0 10px 0 0;
+        font-size: 1.2rem;
     }
-    > .article-right-div > .article-metainfo > span > .fas {
+    > .article-right-div > span > .fas {
         margin: 0 5px 0 0;
     }
     > .article-right-div > .excerpt {

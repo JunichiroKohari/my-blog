@@ -19,17 +19,23 @@ main {
         font-size: calc(2rem + 1.5vw);
         font-weight: 500;
     }
-    > .article > .article-metainfo {
+    > .article {
         margin: 1em 0;
         font-size: 1.3rem;
     }
-    > .article > .article-metainfo > .postedtime > .fas {
+    > .article > .postedtime {
+        font-size: 1.5rem;
+    }
+    > .article > .postedtime > .fas {
         margin: 0 5px 0 0;
     }
-    > .article > .article-metainfo > span > .fas {
+    > .article > span {
+        font-size: 1.5rem;
+    }
+    > .article > span > .fas {
         margin: 0 5px 0 0;
     }
-    > .article > .article-metainfo > .cat-and-tag-div > .category {
+    > .article > .cat-and-tag-div > .category {
         margin: 0 1em 0 0;
     }
     > .post-navigation {

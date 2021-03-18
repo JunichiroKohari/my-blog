@@ -9,17 +9,15 @@
         </a>
         <div class="article-right-div">
             <h2 class="article-title"><a href="<?php the_permalink(); ?>" class="article-title-link"><?php the_title(); ?></a></h2>
-            <div class="article-metainfo">
-                <time class="postedtime" datetime="<?php the_time('Y-m-d'); ?>"><i class="fas fa-calendar-alt"></i><?php the_time('Y年m月d日'); ?></time>
-                <span>
-                    <i class="fas fa-folder-open"></i>
-                    <?php the_category( ' ' ); ?>
-                </span>
-                <span>
-                    <i class="fas fa-tag"></i>
-                    <?php the_tags( ' ' ); ?>
-                </span>
-            </div>
+            <time class="postedtime" datetime="<?php the_time('Y-m-d'); ?>"><i class="fas fa-calendar-alt"></i><?php the_time('Y年m月d日'); ?></time>
+            <span>
+                <i class="fas fa-folder-open"></i>
+                <?php the_category( ' ' ); ?>
+            </span>
+            <span>
+                <i class="fas fa-tag"></i>
+                <?php the_tags( ' ' ); ?>
+            </span>
             <div class="excerpt">
                 <?php the_excerpt(); ?>
             </div>
