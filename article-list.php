@@ -18,9 +18,7 @@
                 <i class="fas fa-tag"></i>
                 <?php the_tags( ' ' ); ?>
             </span>
-            <div class="excerpt">
-                <?php the_excerpt(); ?>
-            </div>
+            <?php echo get_the_excerpt(); ?>
         </div>
     </article>
 <?php endwhile; ?>

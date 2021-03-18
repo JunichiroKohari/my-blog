@@ -149,6 +149,12 @@
     }
     add_filter('excerpt_more', 'new_excerpt_more');
 
+    // 抜粋の p タグにclassを付与
+    function add_class_excerpt ($post_excerpt) {
+        $post_excerpt = '<p class="excerpt">' . $post_excerpt . '</p>';
+        return $post_excerpt;
+    }
+    add_filter ('get_the_excerpt','add_class_excerpt');
     //　抜粋文字数設定
     function twpp_change_excerpt_length( $length ) {
         return 45;
