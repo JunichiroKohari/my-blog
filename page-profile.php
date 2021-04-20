@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="margin-from-header">
-    <h2>プロフィール</h2>
+    <h2 class="profile-title">プロフィール</h2>
     <figure class="profile-icon-div">
         <img src="<?php bloginfo('template_directory'); ?>/img/profile-icon.png" class="profile-icon-img" alt="プロフィールアイコン">
         <figcaption class="my-name"><?php echo esc_html( $current_user->display_name ); ?></figcaption>
