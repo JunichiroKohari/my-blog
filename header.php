@@ -31,7 +31,7 @@
 			'container_class' => 'nav'
 		) ); ?>
 		<?php endif; ?>
-		<div class="top-img-div">
+		<div class="top-img-div display-none">
 			<div class="profile-div">
 				<?php
 					global $current_user;
