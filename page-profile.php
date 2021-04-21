@@ -12,23 +12,57 @@
     <p class="profile-item__text-contactme">ちょっとした相談やお悩み事の相談でも構いません。<br>ご気軽にご連絡ください。</p>
     <h3 class="technologies-title">開発技術</h3>
     <div class="technology-div">
-        <dt>OS</dt>
-        <dd>windows10</dd>
-        <dd>mac os Catalina</dd>
+        <dl class="technology-dl">
+            <dt class="technology-dt">OS</dt>
+            <dd class="technology-dd"><span>windows10</span></dd>
+            <dd class="technology-dd"><span>mac os Catalina</span></dd>
+        </dl>
+        <dl class="technology-dl">
+            <dt class="technology-dt">デザインツール</dt>
+            <dd class="technology-dd"><span>Adobe XD</span></dd>
+            <dd class="technology-dd"><span>Adobe Photoshop</span></dd>
+        </dl>
+        <dl class="technology-dl">
+            <dt class="technology-dt">開発ツール</dt>
+            <dd class="technology-dd"><span>Visual Studio Code</span></dd>
+            <dd class="technology-dd"><span>mac os Catalina</span></dd>
+        </dl>
+        <dl class="technology-dl">
+            <dt class="technology-dt">開発言語</dt>
+            <dd class="technology-dd"><span>HTML5</span></dd>
+            <dd class="technology-dd"><span>CSS3</span></dd>
+            <dd class="technology-dd"><span>Sass</span></dd>
+            <dd class="technology-dd"><span>Less</span></dd>
+            <dd class="technology-dd"><span>PHP</span></dd>
+            <dd class="technology-dd"><span>JavaScript</span></dd>
+        </dl>
+        <dl class="technology-dl">
+            <dt class="technology-dt">サーバー</dt>
+            <dd class="technology-dd"><span>各社レンタルサーバ</span></dd>
+            <dd class="technology-dd"><span>AWS</span></dd>
+        </dl>
     </div>
     <h3 class="about-title">概要</h3>
-    <div>
-        <dt>屋号</dt>
-        <dd>xxxxx</dd>
-        <dt>事業形態</dt>
-        <dd>個人事業主</dd>
-        <dt>所在地</dt>
-        <dd>大阪府大阪市</dd>
-        <dt>事業内容</dt>
-        <dd>Webサイト制作/改修/保守</dd>
-        <dd>LP制作</dd>
-        <dd>Wordpress構築/改修</dd>
-        <dd>Webデザイン/ワイヤーフレーム制作</dd>
+    <div class="about-div">
+        <dl class="about-dl">
+            <dt class="about-dt">屋号</dt>
+            <dd class="about-dd"><span>xxxxx</span></dd>
+        </dl>
+        <dl class="about-dl">
+            <dt class="about-dt">事業形態</dt>
+            <dd class="about-dd"><span>個人事業</span></dd>
+        </dl>
+        <dl class="about-dl">
+            <dt class="about-dt">所在地</dt>
+            <dd class="about-dd"><span>大阪府大阪市</span></dd>
+        </dl>
+        <dl class="about-dl">
+            <dt class="about-dt">事業内容</dt>
+            <dd class="about-dd"><span>Webサイト制作/改修/保守</span></dd>
+            <dd class="about-dd"><span>LP制作</span></dd>
+            <dd class="about-dd"><span>Wordpress構築/改修</span></dd>
+            <dd class="about-dd"><span>Webデザイン/ワイヤーフレーム制作</span></dd>
+        </dl>
     </div>
     <button class="contact-btn">お問合せはこちら</button>
 </main>
