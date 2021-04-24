@@ -1,7 +1,16 @@
-.top-img-div.display-none {
-    display: none;
-}
+.main-no-aside {
+    width: 90%;
+    max-width: 1150px;
+    margin: 60px auto 0 auto;
 
-.profile-title {
-    font-size: 40px;
+    > .profile-title{
+        font-size: 40px;
+        text-align: center;
+    }
+    > .technologies-title {
+        text-align: center;
+    }
+    > .about-title {
+        text-align: center;
+    }
 }

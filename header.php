@@ -43,7 +43,7 @@
 				</figure>
 				<div class="profile-txt-div">
 					<p>ご訪問ありがとうございます！<?php echo esc_html( $current_user->display_name ); ?>と申します。<br>大阪府内でSEとして働くかたわら、Web制作のお仕事も行っております。<br>このブログではIT業界で働く僕が、ITの技術や日々の業務で学んだこと、プライベートでやっている趣味に関することを発信していきます。</p>
-					<p class="last-txt">詳しいプロフィールは<a href="#" class="link-to-profile">こちら</a></p>
+					<p class="last-txt">詳しいプロフィールは<a href="<?php echo get_page_link( 72 ) ?>" class="link-to-profile">こちら</a></p>
 				</div>
 			</div>
 		</div>

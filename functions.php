@@ -54,8 +54,18 @@
             true
         );
     }
-
     add_action('wp_enqueue_scripts', 'add_assets');
+
+    // カスタムフィールド（CSS）有効化
+    function add_custom_css( $css ) {
+        if ( is_singular() ) {
+            if ( $custom_css = get_post_meta(get_the_ID(), 'css', true ) ) {
+                $css .= $custom_css;
+            }
+        }
+        return $css;
+    }
+    add_filter( 'wp_get_custom_css', 'add_custom_css' );
 
     // カスタムメニュー有効化
     register_nav_menus( array (
