@@ -8,6 +8,12 @@ $('.nav-link').on('click', function() {
     $('.nav').toggleClass('hamb-nav');
 });
 
+if (document.URL.match(/profile/)) {
+   $('.top-img-div')
+} else {
+    // 上記の場合以外の時に行う処理を記述する
+}
+
 /* コメント欄 */
 // コメント欄名前必須チェック
 $('#submit').attr('required', true);
