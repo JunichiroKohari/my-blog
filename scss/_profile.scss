@@ -1,16 +1,93 @@
 .main-no-aside {
     width: 90%;
     max-width: 1150px;
-    margin: 60px auto 0 auto;
+    margin: 150px auto;
 
     > .profile-title{
         font-size: 40px;
         text-align: center;
     }
-    > .technologies-title {
+    > .profile-icon-div {
+        flex: 3;
+        position: relative;
+        margin: 3em 0;
+    }
+    > .profile-icon-div > .profile-icon-img {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        width: 20%;
+        max-width: 300px;
+    }
+    > .profile-icon-div > .my-name {
+        display: block;
+        font-family: cursive;
+        text-align: center;
+        font-size: 14px;
+    }
+    > .profile-txt {
+        margin: 1.5em 0;
+    }
+    > .section-title {
+        margin: 5em 0 1em 0;
+        font-size: 28px;
+        font-weight: 500;
         text-align: center;
     }
-    > .about-title {
+    > .profile-div > .profile-dl {
+        display: flex;
+        align-items: center;
+        padding: 1em 0;
+        border-bottom: 1px solid #BAB4B4;
+    }
+    > .profile-div > .profile-dl:first-child {
+        border-top: 1px solid #BAB4B4;
+    }
+    > .profile-div > .profile-dl > .profile-dt {
+        flex: 4;
+        font-weight: 500;
+    }
+    > .profile-div > .profile-dl > .profile-dd {
+        flex: 6;
+    }
+    > .profile-div > .profile-dl > .profile-dd > .dd-div {
+        display: flex;
+        align-items: center;
+        margin: 1em 0;
+    }
+    > .profile-div > .profile-dl > .profile-dd > .dd-div > .technology-name {
+        width: 30%;
+    }
+    > .profile-div > .profile-dl > .profile-dd > .business-ul > .business-li {
+        margin: 1em 0;
+        list-style: inside;
+    }
+    > .btn-div {
+        display: flex;
+        justify-content: center;
+        margin: 6em 0 0 0;
         text-align: center;
+    }
+    > .btn-div > .btn {
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        padding: 1em 5em;
+        background: #ae4c35;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        color: #fff;
+        font-size: calc(1rem + 0.8vw);
+        font-weight: 700;
+        letter-spacing: .1em;
+        transition: .3s;
+    }
+    > .btn-div > .btn:focus, .btn:hover {
+        background: #fff;
+        border-color: currentColor;
+        color: #ae4c35;
+    }
+    > .btn-div > .btn > .fa-envelope {
+        font-size: calc(1rem + 1.3vw);
     }
 }
