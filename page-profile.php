@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main class="main-no-aside">
-    <h2 class="profile-title">プロフィール</h2>
+    <h2 class="page-title">プロフィール</h2>
     <figure class="profile-icon-div">
         <img src="<?php bloginfo('template_directory'); ?>/img/profile-icon.png" class="profile-icon-img" alt="プロフィールアイコン">
         <figcaption class="my-name"><?php echo esc_html( $current_user->display_name ); ?></figcaption>
@@ -11,7 +11,7 @@
     <p class="profile-txt">趣味は、外国人の友達とチャットをすることです。ポーランド人やウルグアイ人など、ネットで出会った友達と週末によくチャットをしています。普段当たり前のようにネットでコミュニケーションを取っていますが、はるか遠く離れた所にいる人と瞬時にやりとりができるってすごいことですよね。私は、ネットによって人と人とが繋がるという体験を仕事でも実現させていきたいなと思っています。</p>
     <p class="profile-txt">ちょっとした相談やお悩み事の相談でも構いません。ご気軽にご連絡ください。</p>
     <h3 class="section-title">開発技術</h3>
-    <div class="profile-div technology">
+    <section class="profile-section technology">
         <dl class="profile-dl">
             <dt class="profile-dt">OS</dt>
             <dd class="profile-dd">
@@ -88,9 +88,9 @@
                 </div>
             </dd>
         </dl>
-    </div>
+    </section>
     <h3 class="section-title">概要</h3>
-    <div class="profile-div about">
+    <section class="profile-section about">
         <dl class="profile-dl">
             <dt class="profile-dt">屋号</dt>
             <dd class="profile-dd">
@@ -126,7 +126,7 @@
                 </ul>
             </dd>
         </dl>
-    </div>
+    </section>
     <div class="btn-div">
         <button class="btn"><i class="far fa-envelope"></i>　お問合せはこちら</button>
     </div>
