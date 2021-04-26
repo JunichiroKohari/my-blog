@@ -34,8 +34,8 @@
                 <label class="contact-label">メッセージ</label>
                 <textarea name="contact-txt" class="contact-input contact-txt" placeholder="ご気軽にご入力ください。" required></textarea>
             </div>
-            <div class="checkbox input-item">
-                <input id="check" name="check" type="checkbox" />
+            <div class="input-item checkbox-div">
+                <input id="check" name="check" type="checkbox" class="checkbox" />
                 <label for="check" class="checkbox-label"></label>
                 <a href="<?php echo get_page_link( 72 ) ?>" class="link-to-profile">プライバシーポリシー</a>に同意する
             </div>
