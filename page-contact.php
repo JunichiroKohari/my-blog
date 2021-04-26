@@ -18,7 +18,7 @@
                 <label class="contact-label">メールアドレス</label>
                 <input type="email" class="contact-input" placeholder="hoge@huga.com" required>
             </div>
-            <div class="input-item">
+            <div class="input-item dropdown-div">
                 <span class="not-required">任意</span>
                 <label class="contact-label">お問い合わせ要件</label>
                 <select name="contact-dropdown" class="contact-input" >
