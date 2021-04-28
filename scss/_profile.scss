@@ -11,6 +11,7 @@
         margin: 0 auto;
         width: 20%;
         max-width: 300px;
+        min-width: 150px;
     }
     > .profile-icon-div > .my-name {
         display: block;
@@ -23,7 +24,7 @@
     }
     > .section-title {
         margin: 5em 0 1em 0;
-        font-size: 28px;
+        font-size: calc(2rem + .2vw);
         font-weight: 500;
         text-align: center;
     }
@@ -51,8 +52,38 @@
     > .profile-section > .profile-dl > .profile-dd > .dd-div > .technology-name {
         width: 30%;
     }
+    > .profile-section > .profile-dl > .profile-dd > .dd-div > .technology-logo {
+        width: 50px;
+        height: 50px;
+    }
     > .profile-section > .profile-dl > .profile-dd > .business-ul > .business-li {
         margin: 1em 0;
         list-style: inside;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .main-no-aside {
+
+        > .profile-icon-div {
+            margin: 40px 0;
+        }
+        > .profile-section > .profile-dl {
+            flex-flow: column;
+        }
+        > .profile-section > .profile-dl > .profile-dt {
+            font-size: 1.2em;
+        }
+        > .profile-section > .profile-dl > .profile-dd > .dd-div {
+            flex-flow: column-reverse;
+        }
+        > .profile-section > .profile-dl > .profile-dd > .dd-div > .technology-name {
+            width: 100%;
+            text-align: center;
+        }
+        > .profile-section > .profile-dl > .profile-dd > .dd-div > .technology-logo {
+            width: 40px;
+            height: 40px;
+        }
     }
 }
