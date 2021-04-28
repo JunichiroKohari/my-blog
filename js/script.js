@@ -8,11 +8,16 @@ $('.nav-link').on('click', function() {
     $('.nav').toggleClass('hamb-nav');
 });
 
-if (document.URL.match(/profile/)) {
-   $('.top-img-div')
-} else {
-    // 上記の場合以外の時に行う処理を記述する
-}
+/* よくある質問ページ */
+// 質問カテゴリのテキストが空の場合、要素非表示
+var quetion_category = $('.faq-section').children('.question-category');
+$.each (quetion_category, function (i, val) {
+    if (val !== null &&　$(val).text() == '') {
+        $(val).css('display', 'none');
+    } else {
+        $(val).prev().css('border-bottom', 'none');
+    }
+});
 
 /* コメント欄 */
 // コメント欄名前必須チェック
