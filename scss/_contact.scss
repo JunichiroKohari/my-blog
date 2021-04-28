@@ -48,7 +48,7 @@
         content: '';
         display: block;
         position: absolute;
-        top: 51%;
+        top: 52%;
         left: 95%;
         border-top: 11px solid #000000;
         border-left: 6px solid transparent;
@@ -151,19 +151,10 @@
         letter-spacing: .1em;
         transition: .3s;
     }
-    > .contact-section > .contact-form > .btn-div > .btn:focus, .btn:hover {
+    > .contact-section > .contact-form > .btn-div > .btn:hover {
         background: #fff;
         border-color: currentColor;
         color: #EF538F;
-    }
-    @media screen and (max-width:960px) {
-        .contact-form {
-            width: 100%;
-            padding: 0 1em;
-        }
-        .contact-txt {
-            height: 187px;
-        }
     }
 }
 
@@ -193,6 +184,15 @@
         > .contact-section > .contact-form > .checkbox-div > .checkbox-label {
             width: 20px;
             height: 20px;
+        }
+    }
+}
+@media screen and (max-width: 340px) {
+    .main-no-aside {
+
+        > .contact-section > .contact-info {
+            padding: 0 2em;
+            text-align: left;
         }
     }
 }
