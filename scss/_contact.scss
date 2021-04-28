@@ -10,8 +10,8 @@
         font-size: calc(13px + .1vw);
     }
     > .contact-section > .contact-form {
-        width: 37.5%;
-        min-width: 54.5%;
+        width: 55%;
+        min-width: 400px;
         margin: 5em auto 0 auto;
     }
     > .contact-section > .contact-info:nth-child(3) {
@@ -48,7 +48,7 @@
         content: '';
         display: block;
         position: absolute;
-        top: 50%;
+        top: 51%;
         left: 95%;
         border-top: 11px solid #000000;
         border-left: 6px solid transparent;
@@ -59,7 +59,7 @@
         display: block;
         margin-bottom: 1em;
         color: #AE4C35;
-        font-size: calc(1rem + .3vw);
+        font-size: calc(1rem + .6vw);
         text-align: center;
     }
     > .contact-section > .contact-form > .input-item > .contact-input {
@@ -165,14 +165,34 @@
             height: 187px;
         }
     }
-    @media screen and (max-width: 415px) {
-        .contact-form {
-            padding: 0;
+}
+
+@media screen and (max-width: 960px) {
+    .main-no-aside {
+
+        > .contact-section > .contact-form {
+            width: 75%;
         }
-        .required {
-            padding: 3px;
-            background: transparent;
-            color: #EF538F;
+        > .contact-section > .contact-form > .dropdown-div::before {
+            top: 48%;
+        }
+    }
+}
+@media screen and (max-width: 560px) {
+    .main-no-aside {
+        width: 100%;
+
+        > .contact-section > .contact-form {
+            width: 95%;
+            min-width: 200px;
+        }
+        > .contact-section > .contact-form > .dropdown-div::before {
+            top: 46%;
+            left: 92%;
+        }
+        > .contact-section > .contact-form > .checkbox-div > .checkbox-label {
+            width: 20px;
+            height: 20px;
         }
     }
 }
