@@ -23,9 +23,9 @@
 			<span class="border"></span>
 			<span class="border"></span>
 		</div>
-		<?php if ( has_nav_menu( 'global' ) ) : ?>
+		<?php if ( has_nav_menu( 'header' ) ) : ?>
 		<?php wp_nav_menu( array(
-			'theme_location'  => 'global',
+			'theme_location'  => 'header',
 			'menu_id' 		  => 'header-menu',
 			'container' 	  => 'nav',
 			'container_class' => 'nav'

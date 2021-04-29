@@ -19,9 +19,9 @@
                 <?php wp_get_archives('type=monthly&format=option&show_post_count=1'); ?>
             </select>
         </form>
-        <?php if ( has_nav_menu( 'global' ) ) : ?>
+        <?php if ( has_nav_menu( 'footer' ) ) : ?>
 			<?php wp_nav_menu( array(
-				'theme_location'  => 'global',
+				'theme_location'  => 'footer',
 				'menu_id' 		  => 'footer-menu',
 				'container' 	  => 'nav',
 				'container_class' => 'nav'

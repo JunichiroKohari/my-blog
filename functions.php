@@ -69,7 +69,8 @@
 
     // カスタムメニュー有効化
     register_nav_menus( array (
-        'global' => 'Global Menu',
+        'header' => 'ヘッダーナビゲーション',
+        'footer' => 'フッターナビゲーション',
     ) );
 
     // ウィジェットエリアの登録
