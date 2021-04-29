@@ -40,7 +40,7 @@
                 <a href="<?php echo get_page_link( 72 ) ?>" class="link-to-profile">プライバシーポリシー</a>に同意する
             </div>
             <div class="input-item btn-div">
-                <button class="btn" onclick="alert('hey');">送信</button>
+                <button class="submit" onclick="void(0);">送信</button>
             </div>
         </form>
     </section>

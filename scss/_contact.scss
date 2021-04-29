@@ -137,7 +137,7 @@
     > .contact-section > .contact-form > .btn-div {
         text-align: center;
     }
-    > .contact-section > .contact-form > .btn-div > .btn {
+    > .contact-section > .contact-form > .btn-div > .submit {
         display: inline-block;
         max-width: 100%;
         padding: .6em 4em;
@@ -151,7 +151,7 @@
         letter-spacing: .1em;
         transition: .3s;
     }
-    > .contact-section > .contact-form > .btn-div > .btn:hover {
+    > .contact-section > .contact-form > .btn-div > .submit:hover {
         background: #fff;
         border-color: currentColor;
         color: #EF538F;

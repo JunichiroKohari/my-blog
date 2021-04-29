@@ -19,6 +19,16 @@ $.each (quetion_category, function (i, val) {
     }
 });
 
+/* お問い合わせページ */
+// 送信ボタン押下時、メッセージ表示
+$('.submit').modaal({
+    type: 'confirm',
+    confirm_button_text: 'OK',
+    confirm_cancel_button_text: '',
+    confirm_title: 'お問い合わせいただきありがとうございます！',
+    confirm_content: '<p>3営業日以内に回答いたします。</p>',
+});
+
 /* コメント欄 */
 // コメント欄名前必須チェック
 $('#submit').attr('required', true);
