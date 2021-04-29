@@ -1,4 +1,5 @@
-/* ハンバーガーメニュー */
+/* ヘッダー */
+// ハンバーガーメニュー
 $('.hamb-button').on('click', function() {
     $('.hamb-button').toggleClass('close-button');
     $('.nav').toggleClass('hamb-nav');

@@ -21,21 +21,23 @@ aside {
         color: #ffffff;
         font-size: 1.8rem;
     }
-    > .widget > ul > li:first-child {
-        padding: 1.2em 0 0 0;
-    }
-    > .widget > ul > li:last-child {
-        padding: 0 0 1.2em 0;
-    }
-    > .widget > ul > li:not(:last-child):after {
-        content: '';
-        display: block;
-        width: 80%;
-        margin: 1em auto;
-        border-bottom: 1px solid gray;
-    }
-    > .widget > ul > li > a {
-        color: #0AB0FA;
+    > .widget > ul > li {
+        &:first-child {
+            padding: 1.2em 0 0 0;
+        }
+        &:last-child {
+            padding: 0 0 1.2em 0;
+        }
+        &:not(:last-child):after {
+            content: '';
+            display: block;
+            width: 80%;
+            margin: 1em auto;
+            border-bottom: 1px solid gray;
+        }
+        & > a {
+            color: #0AB0FA;
+        }
     }
     > .ad-placeholder {
         width: 100%;

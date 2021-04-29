@@ -28,11 +28,12 @@
         letter-spacing: .1em;
         word-break: keep-all;
         transition: .3s;
-    }
-    > .btn-div > .btn:focus, .btn:hover {
-        background: #fff;
-        border-color: currentColor;
-        color: #ae4c35;
+
+        &:focus, &:hover {
+            background: #fff;
+            border-color: currentColor;
+            color: #ae4c35;
+        }
     }
     > .btn-div > .btn > .fa-envelope {
         font-size: calc(1rem + 1.3vw);

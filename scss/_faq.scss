@@ -15,14 +15,15 @@
         align-items: flex-start;
         padding: 0 2em;
         border-bottom: 2px solid #0063DC;
+
+        &:last-child {
+            border-bottom: none;
+        }
     }
     > .faq-section > .faq-pair > .faq > .faq-icon-img {
         display: block;
         width: 35px;
         margin: 0 .5em 0 0;
-    }
-    > .faq-section > .faq-pair:last-child {
-        border-bottom: none;
     }
     > .faq-section > .faq-pair > .question, .answer {
         display: flex;
@@ -33,7 +34,6 @@
         margin: 0 0 2em 0;
     }
 }
-
 @media screen and (max-width: 560px) {
     .main-no-aside {
         > .faq-section > .faq-pair > .faq > .faq-icon-img {
