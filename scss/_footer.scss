@@ -18,12 +18,13 @@ footer {
         display: none;
     }
     > nav {
-        width: 85%;
+        width: 100%;
 
         & > .menu {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-evenly;
+            word-break: keep-all;
         }
         & > .menu > .menu-item {
             width: calc(100% / 6);

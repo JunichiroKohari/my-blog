@@ -21,7 +21,7 @@
         <?php } ?>
     </section>
     <div class="btn-div">
-        <button onclick="location.href='<?php echo get_page_link( 89 ) ?>'" class="btn"><i class="far fa-envelope"></i>　お問合せはこちら</button>
+        <button onclick="location.href='<?php echo esc_url(get_page_link( 89 )) ?>'" class="btn"><i class="far fa-envelope"></i>　お問合せはこちら</button>
     </div>
 </main>
 

@@ -1,7 +1,7 @@
 .main-no-aside {
 
     > .contact-section {
-        margin: 5em 0;
+        margin: 4em 0;
         padding: 5em 0;
         background: #FFF8F8;
     }
@@ -174,7 +174,6 @@
 }
 @media screen and (max-width: 560px) {
     .main-no-aside {
-        width: 100%;
 
         > .contact-section > .contact-form {
             width: 95%;
@@ -190,7 +189,7 @@
         }
     }
 }
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 370px) {
     .main-no-aside {
 
         > .contact-section > .contact-info {

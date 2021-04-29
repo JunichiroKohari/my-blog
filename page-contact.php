@@ -37,7 +37,7 @@
             <div class="input-item checkbox-div">
                 <input id="check" name="check" type="checkbox" class="checkbox" />
                 <label for="check" class="checkbox-label"></label>
-                <a href="<?php echo get_page_link( 72 ) ?>" class="link-to-profile">プライバシーポリシー</a>に同意する
+                <a href="<?php echo esc_url(get_page_link( 75 )) ?>" class="link-to-profile">プライバシーポリシー</a>に同意する
             </div>
             <div class="input-item btn-div">
                 <button class="submit" onclick="void(0);">送信</button>
