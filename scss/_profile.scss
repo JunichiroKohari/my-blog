@@ -1,5 +1,4 @@
 .main-no-aside {
-
     > .profile-icon-div {
         flex: 3;
         position: relative;
@@ -33,7 +32,6 @@
         align-items: center;
         padding: 1em 0;
         border-bottom: 1px solid #BAB4B4;
-
         &:first-child {
             border-top: 1px solid #BAB4B4;
         }
@@ -64,7 +62,6 @@
 }
 @media screen and (max-width: 560px) {
     .main-no-aside {
-
         > .profile-icon-div {
             margin: 40px 0;
         }

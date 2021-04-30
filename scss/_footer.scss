@@ -13,13 +13,11 @@ footer {
     color: #ffffff;
     z-index: 0;
     overflow: hidden;
-
     > .category-and-archive {
         display: none;
     }
     > nav {
         width: 100%;
-
         & > .menu {
             display: flex;
             align-items: center;
@@ -45,7 +43,6 @@ footer {
         bottom: 0;
         font-size: calc(1rem + .4vw);
     }
-
     &::before {
         content: '';
         filter: blur(3px);
@@ -61,7 +58,6 @@ footer {
 @media screen and (max-width: 960px) {
     footer {
         padding: 0 0 4em 0;
-
         > .category-and-archive {
             display: block;
             width: 100%;

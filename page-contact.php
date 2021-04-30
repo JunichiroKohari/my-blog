@@ -6,7 +6,7 @@
         <p class="contact-info">当サイトをご覧いただきありがとうございます。</p>
         <p class="contact-info">ご相談やお問い合わせはこちらからお願いいたします。</p>
         <p class="contact-info">３営業日以内に返信させていただきます。</p>
-        <p class="contact-info">よくある質問は<a href="<?php echo get_page_link( 72 ) ?>" class="link-to-profile">こちら</a></p>
+        <p class="contact-info">よくある質問は<a href="<?php echo esc_url(get_page_link( 103 )) ?>" class="link-to-profile">こちら</a></p>
         <form action="#" class="contact-form">
             <div class="input-item">
                 <span class="required">必須</span>

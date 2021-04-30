@@ -2,7 +2,6 @@
     width: 90%;
     max-width: 1150px;
     margin: 7em auto;
-
     > .page-title {
         font-size: calc(2rem + 1.5vw);
         font-weight: 500;
@@ -28,7 +27,6 @@
         letter-spacing: .1em;
         word-break: keep-all;
         transition: .3s;
-
         &:focus, &:hover {
             background: #fff;
             border-color: currentColor;
