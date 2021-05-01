@@ -17,12 +17,12 @@
         min-width: 400px;
         margin: 5em auto 0 auto;
     }
-    > .contact-section > .contact-form > .input-item > .required {
+    > .contact-section > .contact-form > .input-item > .contact-label > .required {
         display: block;
         position: absolute;
         left: auto;
         bottom: auto;
-        width: 6.5em;
+        width: 5.5em;
         border-radius: 3px;
         color: #fff;
         font-size: .8rem;
@@ -57,7 +57,9 @@
     }
     > .contact-section > .contact-form > .input-item > .contact-label {
         position: relative;
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         margin-bottom: 1em;
         color: #AE4C35;
         font-size: calc(1rem + .6vw);
