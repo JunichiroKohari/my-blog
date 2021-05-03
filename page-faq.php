@@ -2,12 +2,12 @@
 
 <main class="main-no-aside">
     <h2 class="page-title">よくある質問</h2>
-    <section class="faq-section">
+    <section id="faq-section" class="faq-section">
         <?php
             $group = SCF::get('faq');
             foreach ($group as $fields ) {
         ?>
-            <h3 class="question-category"><?php echo $fields['category']; ?></h3>
+            <h3 id="question-category" class="question-category"><?php echo $fields['category']; ?></h3>
             <dl class="faq-pair">
                 <dt class="faq question">
                     <img src="<?php bloginfo('template_directory'); ?>/img/question.png" class="faq-icon-img" alt="Qマーク">

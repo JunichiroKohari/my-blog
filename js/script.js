@@ -21,6 +21,34 @@ $.each (quetion_category, function (i, val) {
 });
 
 /* お問い合わせページ */
+$("#contact-form").submit(function(){
+    var name = $('#name').val();
+    var email = $('#email').val();
+    var requirement = $('.requirement-option:selected').val();
+    var message = $('#message').val();
+    var check = $('#check').is(':checked');
+    var referrer = document.referrer;
+    $.ajax({
+        url : 'https://junichirokohari.me/wp-content/themes/my-blog/sendmail.php',
+        type: 'POST',
+        dataType: 'json',
+        data: { 'name' : name,
+                'email' : email,
+                'requirement' : requirement,
+                'message' : message,
+                'check' : check,
+                'referrer' : referrer }
+    })
+    .done( function(data){
+        alert('success!');
+        alert(data.errflg);
+        alert(data.dispmsg);
+    })
+    .fail( function(data){
+        alert('failed');
+    })
+    return false;
+});
 // 送信ボタン押下時、メッセージ表示
 var modaalObj = {
     type: 'confirm',

@@ -18,7 +18,7 @@
 				<img src="<?php bloginfo('template_directory'); ?>/img/blogtitle.png" class="title-img" alt="ブログトップ画像">
 			</a>
 		</h1>
-		<div class="hamb-button">
+		<div id="hamb-button" class="hamb-button">
 			<span class="border"></span>
 			<span class="border"></span>
 			<span class="border"></span>
