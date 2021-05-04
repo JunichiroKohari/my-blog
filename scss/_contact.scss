@@ -17,18 +17,18 @@
         min-width: 400px;
         margin: 5em auto 0 auto;
     }
-    > .contact-section > .contact-form > .input-item > .contact-label > .required {
-        display: block;
-        position: absolute;
-        left: auto;
-        bottom: auto;
-        width: 5.5em;
-        border-radius: 3px;
-        color: #fff;
-        font-size: .8rem;
-        background: #EF538F;
-        text-align: center;
-    }
+    // > .contact-section > .contact-form > .input-item > .contact-label > .required {
+    //     display: block;
+    //     position: absolute;
+    //     left: auto;
+    //     bottom: auto;
+    //     width: 5.5em;
+    //     border-radius: 3px;
+    //     color: #fff;
+    //     font-size: .8rem;
+    //     background: #EF538F;
+    //     text-align: center;
+    // }
     > .contact-section > .contact-form > .input-item > .not-required {
         display: block;
         position: absolute;
@@ -59,11 +59,24 @@
         position: relative;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         margin-bottom: 1em;
         color: #AE4C35;
-        font-size: calc(1rem + .6vw);
-        text-align: center;
+        font-size: calc(1rem + .7vw);
+
+        &.required::before {
+            content: '必須';
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: auto;
+            width: 5.5em;
+            border-radius: 3px;
+            color: #fff;
+            font-size: .8rem;
+            background: #EF538F;
+            text-align: center;
+        }
     }
     > .contact-section > .contact-form > .input-item > .contact-input {
         width: 100%;
@@ -83,6 +96,7 @@
         justify-content: center;
         position: relative;
         margin: 1em 0 3.5em 0;
+        font-size: calc(1rem + .5vw);
     }
     > .contact-section > .contact-form > .checkbox-div > .checkbox {
         position: absolute;
@@ -162,6 +176,51 @@
         }
     }
 }
+#close {
+    cursor: pointer;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    padding: 12px;
+    margin: 16px auto 0;
+    background: #4caf50;
+    color: white;
+}
+#mask {
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  #modal {
+    background: #fff;
+    color: #555;
+    width: 80%;
+    padding: 3em;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
+  }
+
+  #modal p {
+    margin: 0 0 20px;
+  }
+  #mask.hidden {
+    display: none;
+  }
+
+  #modal.hidden {
+    transform: translate(0, -500px);
+  }
 @media screen and (max-width: 960px) {
     .main-no-aside {
 

@@ -21,7 +21,12 @@ $.each (quetion_category, function (i, val) {
 });
 
 /* お問い合わせページ */
-$("#contact-form").submit(function(){
+$("#contact-form").validationEngine(
+    'attach', {
+        promptPosition: "topLeft"//エラーメッセージ位置の指定
+    }
+);
+function sendmail() {
     var name = $('#name').val();
     var email = $('#email').val();
     var requirement = $('.requirement-option:selected').val();
@@ -45,42 +50,38 @@ $("#contact-form").submit(function(){
         alert(data.dispmsg);
     })
     .fail( function(data){
+        modaalflg = true;
         alert('failed');
     })
     return false;
-});
-// 送信ボタン押下時、メッセージ表示
-var modaalObj = {
-    type: 'confirm',
-    confirm_button_text: 'OK',
-    confirm_cancel_button_text: '',
-    confirm_title: 'お問い合わせいただきありがとうございます！',
-    confirm_content: '<p>3営業日以内に回答いたします。</p>',
-    // before_open: errorCheck,
-    should_open: true,
-};
-$('#submit').on('click', function () {
-    // errorCheck();
-    // if ($('#name').val() !== '' && $('#email').val() !== '' && $('#message').val() !== '') {
-    //     if (!$('#check').prop('checked')) {
-    //         alert('プライバシーポリシーをご確認いただき、チェックボックスにチェックを入れて下さい。');
-    //     } else {
-    //         $('#submit').modaal(modaalObj);
-    //     }
-    // }
-})
-// 必須項目入力チェック
-// function errorCheck() {
-//     if ($('#name').val() == '' || $('#email').val() == '' || $('#message').val() == '') {
-//         alert('お名前、メールアドレス、メッセージは入力必須項目です。');
-//         modaalObj.should_open = false;
-//     } else if (!$('#check').prop('checked')) {
-//         alert('プライバシーポリシーをご確認いただき、チェックボックスにチェックを入れて下さい。');
-//         modaalObj.should_open = false;
-//     } else {
-//         modaalObj.should_open = true;
-//     }
-// }
+}
+
+const open = document.getElementById('submit');
+  const close = document.getElementById('close');
+  const modal = document.getElementById('modal');
+  const mask = document.getElementById('mask');
+
+  open.addEventListener('click', function () {
+    modal.classList.remove('hidden');
+    mask.classList.remove('hidden');
+  });
+  close.addEventListener('click', function () {
+    modal.classList.add('hidden');
+    mask.classList.add('hidden');
+  });
+  mask.addEventListener('click', function () {
+    modal.classList.add('hidden');
+    mask.classList.add('hidden');
+  });
+// $('#submit').modaal({
+//     type: 'confirm',
+//     confirm_button_text: 'OK',
+//     confirm_cancel_button_text: '',
+//     confirm_title: 'お問い合わせいただきありがとうございます！',
+//     confirm_content: '<p>3営業日以内に回答いたします。</p>',
+//     // before_open: errorCheck,
+//     should_open: true,
+// });
 
 /* コメント欄 */
 // コメント欄名前必須チェック

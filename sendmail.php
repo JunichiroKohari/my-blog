@@ -8,7 +8,7 @@ date_default_timezone_set('Asia/Tokyo');
 // 個別設定項目（３つ）
 // --------------------------
 // 送信先メールアドレス
-$to = 'jun.kero2.koharin@gmail.com';
+$to = 'junichiro@kohari.jp';
 // メールタイトル
 $subject = 'お問い合わせフォームより';
 // ドメイン（リファラチェックと送信元メールアドレスに利用）
@@ -32,18 +32,14 @@ if(isset($_POST['requirement'])){ $requirementval = $_POST['requirement']; }
 if(isset($_POST['message'])){ $messageval = $_POST['message']; }
 if(isset($_POST['referrer'])){ $referrer = $_POST['referrer']; }
 
-if(strpos($_SERVER['HTTP_REFERER'], $domain) === false){
+if (strpos($_SERVER['HTTP_REFERER'], $domain) === false){
   // リファラチェック
   $errflg = true;
-} else if($nameval == '' || $mailval == '' || $messageval == ''){
-  //必須チェック
-  $errflg = true;
-} else if(!preg_match("/^[\.!#%&\-_0-9a-zA-Z\?\/\+]+\@[!#%&\-_0-9a-z]+(\.[!#%&\-_0-9a-z]+)+$/", $mailval) || count( explode('@',$mailval) ) !=2){
-  //メールアドレスチェック
-  $errflg = true;
+
 } else{
   // メールデータ作成
   $subject = "=?iso-2022-jp?B?".base64_encode(mb_convert_encoding($subject,'JIS','UTF-8'))."?=";
+
   $message= '名前：'.$nameval."\n";
   $message.='メール：'.$mailval."\n";
   $message.='ご用件：'.$requirementval."\n";
@@ -56,7 +52,9 @@ if(strpos($_SERVER['HTTP_REFERER'], $domain) === false){
   $message.='リファラURL：'.$referrer."\n";
   $message.='お問い合わせページ：'.@$_SERVER['HTTP_REFERER']."\n";
   $message= mb_convert_encoding($message,'JIS','UTF-8');
+
   $fromName = mb_encode_mimeheader(mb_convert_encoding($nameval,'JIS','UTF-8'));
+
   $header ='From: '.$fromName.'<wordpress@'.$domain.'>'."\n";
   $header.='Reply-To: '.$mailval."\n";
   $header.='Content-Type:text/plain;charset=iso-2022-jp\nX-Mailer: PHP/'.phpversion();

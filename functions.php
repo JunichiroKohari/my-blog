@@ -26,6 +26,13 @@
             array(),
             filemtime( get_theme_file_path('/style.css'))
         );
+        // jQuery validationEngine
+        wp_enqueue_style(
+            'validationEngine-css',
+            get_theme_file_uri('/css/validationEngine.jquery.css'),
+            array(),
+            filemtime( get_theme_file_path('/css/validationEngine.jquery.css'))
+        );
 
         /* javascript */
         // jQuery
@@ -37,11 +44,28 @@
             '3.3.1',
             true
         );
+        // modaal
         wp_enqueue_script(
             'modaal',
             get_theme_file_uri( '/js/modaal.js' ),
             array( 'jquery' ),
             filemtime( get_theme_file_path( '/js/modaal.js' ) ),
+            true
+        );
+        // jQuery validationEngine
+        wp_enqueue_script(
+            'validationEngine-js',
+            get_theme_file_uri( '/js/jquery.validationEngine.js' ),
+            array( 'jquery' ),
+            filemtime( get_theme_file_path( '/js/jquery.validationEngine.js' ) ),
+            true
+        );
+        // jQuery validationEngine 日本語
+        wp_enqueue_script(
+            'validationEngine-ja-js',
+            get_theme_file_uri( '/js/jquery.validationEngine-ja.js' ),
+            array( 'jquery' ),
+            filemtime( get_theme_file_path( '/js/jquery.validationEngine-ja.js' ) ),
             true
         );
         // slick
