@@ -44,14 +44,6 @@
             '3.3.1',
             true
         );
-        // modaal
-        wp_enqueue_script(
-            'modaal',
-            get_theme_file_uri( '/js/modaal.js' ),
-            array( 'jquery' ),
-            filemtime( get_theme_file_path( '/js/modaal.js' ) ),
-            true
-        );
         // jQuery validationEngine
         wp_enqueue_script(
             'validationEngine-js',

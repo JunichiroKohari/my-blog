@@ -7,7 +7,7 @@
         <p class="contact-info">ご相談やお問い合わせはこちらからお願いいたします。</p>
         <p class="contact-info">３営業日以内に返信させていただきます。</p>
         <p class="contact-info">よくある質問は<a href="<?php echo esc_url(get_page_link( 103 )) ?>" class="link-to-profile">こちら</a></p>
-        <form id="contact-form" class="contact-form">
+        <form method="POST" id="contact-form" class="contact-form">
             <div class="input-item">
                 <label class="contact-label required"><span class="contact-label-text">お名前</span></label>
                 <input id="name" type="text" class="contact-input validate[required]" placeholder="田中　太郎" >
@@ -22,13 +22,13 @@
             </div>
             <div class="input-item dropdown-div">
                 <span class="not-required">任意</span>
-                <label class="contact-label">お問い合わせ要件</label>
+                <label class="contact-label">お問い合わせご用件</label>
                 <select id="requirement" name="contact-dropdown" class="contact-input" >
-                    <option class="requirement-option" value="0"></option>
-                    <option class="requirement-option" value="1">Webサイト制作(WordPress)ご依頼</option>
-                    <option class="requirement-option" value="2">Webサイト制作ご依頼</option>
-                    <option class="requirement-option" value="3">LPサイト制作ご依頼</option>
-                    <option class="requirement-option" value="4">その他</option>
+                    <option class="requirement-option" value="ご用件選択なし"></option>
+                    <option class="requirement-option" value="Webサイト制作(WordPress)ご依頼">Webサイト制作(WordPress)ご依頼</option>
+                    <option class="requirement-option" value="Webサイト制作ご依頼">Webサイト制作ご依頼</option>
+                    <option class="requirement-option" value="LPサイト制作ご依頼">LPサイト制作ご依頼</option>
+                    <option class="requirement-option" value="その他">その他</option>
                 </select>
             </div>
             <div class="input-item">
@@ -41,16 +41,9 @@
                 <a href="<?php echo esc_url(get_page_link( 75 )) ?>" class="link-to-profile">プライバシーポリシー</a>に同意する
             </div>
             <div class="input-item btn-div">
-                <input type="submit" id="submit" class="submit" onclick="void(0);">送信</input>
+                <button id="submit" class="submit" onclick="">送信</button>
             </div>
             <input id="referrer" type="hidden" name="referrer">
-            <div id="mask" class="hidden"></div>
-            <section id="modal" class="hidden">
-                <p>He said that that that that that boy used in the sentence was wrong.<br>あの少年がその文で使ったあのthatは間違っていたと彼は言った。</p>
-                <div id="close">
-                    閉じる
-                </div>
-            </section>
         </form>
     </section>
 </main>

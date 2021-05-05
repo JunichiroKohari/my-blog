@@ -305,12 +305,44 @@
 				sendmail();
 			}
 
+			if (r && options.ajaxFormValidation) {
+				methods._validateFormWithAjax(form, options);
+				// cancel form auto-submission - process with async call onAjaxFormComplete
+				return false;
+			}
+
 			if(options.onValidationComplete) {
 				// !! ensures that an undefined return is interpreted as return false but allows a onValidationComplete() to possibly return true and have form continue processing
 				return !!options.onValidationComplete(form, r);
 			}
 
 			return r;
+		},
+		/**
+		* Return true if the ajax field validations passed so far
+		* @param {Object} options
+		* @return true, is all ajax validation passed so far (remember ajax is async)
+		*/
+		_checkAjaxStatus: function(options) {
+			var status = true;
+			$.each(options.ajaxValidCache, function(key, value) {
+				if (!value) {
+					status = false;
+					// break the each
+					return false;
+				}
+			});
+			return status;
+		},
+
+		/**
+		* Return true if the ajax field is validated
+		* @param {String} fieldid
+		* @param {Object} options
+		* @return true, if validation passed, false if false or doesn't exist
+		*/
+		_checkAjaxFieldStatus: function(fieldid, options) {
+			return options.ajaxValidCache[fieldid] == true;
 		},
 		/**
 		* Validates form fields, shows prompts accordingly
@@ -419,6 +451,90 @@
 				return false;
 			}
 			return true;
+		},
+		/**
+		* This method is called to perform an ajax form validation.
+		* During this process all the (field, value) pairs are sent to the server which returns a list of invalid fields or true
+		*
+		* @param {jqObject} form
+		* @param {Map} options
+		*/
+		_validateFormWithAjax: function(form, options) {
+
+			var data = form.serialize();
+									var type = (options.ajaxFormValidationMethod) ? options.ajaxFormValidationMethod : "GET";
+			var url = (options.ajaxFormValidationURL) ? options.ajaxFormValidationURL : form.attr("action");
+									var dataType = (options.dataType) ? options.dataType : "json";
+			$.ajax({
+				type: type,
+				url: url,
+				cache: false,
+				dataType: dataType,
+				data: data,
+				form: form,
+				methods: methods,
+				options: options,
+				beforeSend: function() {
+					return options.onBeforeAjaxFormValidation(form, options);
+				},
+				error: function(data, transport) {
+					if (options.onFailure) {
+						options.onFailure(data, transport);
+					} else {
+						methods._ajaxError(data, transport);
+					}
+				},
+				success: function(json) {
+					if ((dataType == "json") && (json !== true)) {
+						// getting to this case doesn't necessary means that the form is invalid
+						// the server may return green or closing prompt actions
+						// this flag helps figuring it out
+						var errorInForm=false;
+						for (var i = 0; i < json.length; i++) {
+							var value = json[i];
+
+							var errorFieldId = value[0];
+							var errorField = $($("#" + errorFieldId)[0]);
+
+							// make sure we found the element
+							if (errorField.length == 1) {
+
+								// promptText or selector
+								var msg = value[2];
+								// if the field is valid
+								if (value[1] == true) {
+
+									if (msg == ""  || !msg){
+										// if for some reason, status==true and error="", just close the prompt
+										methods._closePrompt(errorField);
+									} else {
+										// the field is valid, but we are displaying a green prompt
+										if (options.allrules[msg]) {
+											var txt = options.allrules[msg].alertTextOk;
+											if (txt)
+												msg = txt;
+										}
+										if (options.showPrompts) methods._showPrompt(errorField, msg, "pass", false, options, true);
+									}
+								} else {
+									// the field is invalid, show the red error prompt
+									errorInForm|=true;
+									if (options.allrules[msg]) {
+										var txt = options.allrules[msg].alertText;
+										if (txt)
+											msg = txt;
+									}
+									if(options.showPrompts) methods._showPrompt(errorField, msg, "", false, options, true);
+								}
+							}
+						}
+						options.onAjaxFormComplete(!errorInForm, form, json, options);
+					} else
+						options.onAjaxFormComplete(true, form, json, options);
+
+				}
+			});
+
 		},
 		/**
 		* Validates field, shows prompts accordingly
@@ -1288,6 +1404,154 @@
 				valid = sum % 10 == 0;
 			}
 			if (!valid) return options.allrules.creditCard.alertText;
+		},
+		/**
+		* Ajax field validation
+		*
+		* @param {jqObject} field
+		* @param {Array[String]} rules
+		* @param {int} i rules index
+		* @param {Map}
+		*            user options
+		* @return nothing! the ajax validator handles the prompts itself
+		*/
+		 _ajax: function(field, rules, i, options) {
+
+			 var errorSelector = rules[i + 1];
+			 var rule = options.allrules[errorSelector];
+			 var extraData = rule.extraData;
+			 var extraDataDynamic = rule.extraDataDynamic;
+			 var data = {
+				"fieldId" : field.attr("id"),
+				"fieldValue" : field.val()
+			 };
+
+			 if (typeof extraData === "object") {
+				$.extend(data, extraData);
+			 } else if (typeof extraData === "string") {
+				var tempData = extraData.split("&");
+				for(var i = 0; i < tempData.length; i++) {
+					var values = tempData[i].split("=");
+					if (values[0] && values[0]) {
+						data[values[0]] = values[1];
+					}
+				}
+			 }
+
+			 if (extraDataDynamic) {
+				 var tmpData = [];
+				 var domIds = String(extraDataDynamic).split(",");
+				 for (var i = 0; i < domIds.length; i++) {
+					 var id = domIds[i];
+					 if ($(id).length) {
+						 var inputValue = field.closest("form, .validationEngineContainer").find(id).val();
+						 var keyValue = id.replace('#', '') + '=' + escape(inputValue);
+						 data[id.replace('#', '')] = inputValue;
+					 }
+				 }
+			 }
+
+			 // If a field change event triggered this we want to clear the cache for this ID
+			 if (options.eventTrigger == "field") {
+				delete(options.ajaxValidCache[field.attr("id")]);
+			 }
+
+			 // If there is an error or if the the field is already validated, do not re-execute AJAX
+			 if (!options.isError && !methods._checkAjaxFieldStatus(field.attr("id"), options)) {
+				 $.ajax({
+					 type: options.ajaxFormValidationMethod,
+					 url: rule.url,
+					 cache: false,
+					 dataType: "json",
+					 data: data,
+					 field: field,
+					 rule: rule,
+					 methods: methods,
+					 options: options,
+					 beforeSend: function() {},
+					 error: function(data, transport) {
+						if (options.onFailure) {
+							options.onFailure(data, transport);
+						} else {
+							methods._ajaxError(data, transport);
+						}
+					 },
+					 success: function(json) {
+
+						 // asynchronously called on success, data is the json answer from the server
+						 var errorFieldId = json[0];
+						 //var errorField = $($("#" + errorFieldId)[0]);
+						 var errorField = $("#"+ errorFieldId).eq(0);
+
+						 // make sure we found the element
+						 if (errorField.length == 1) {
+							 var status = json[1];
+							 // read the optional msg from the server
+							 var msg = json[2];
+							 if (!status) {
+								 // Houston we got a problem - display an red prompt
+								 options.ajaxValidCache[errorFieldId] = false;
+								 options.isError = true;
+
+								 // resolve the msg prompt
+								 if(msg) {
+									 if (options.allrules[msg]) {
+										 var txt = options.allrules[msg].alertText;
+										 if (txt) {
+											msg = txt;
+							}
+									 }
+								 }
+								 else
+									msg = rule.alertText;
+
+								 if (options.showPrompts) methods._showPrompt(errorField, msg, "", true, options);
+							 } else {
+								 options.ajaxValidCache[errorFieldId] = true;
+
+								 // resolves the msg prompt
+								 if(msg) {
+									 if (options.allrules[msg]) {
+										 var txt = options.allrules[msg].alertTextOk;
+										 if (txt) {
+											msg = txt;
+							}
+									 }
+								 }
+								 else
+								 msg = rule.alertTextOk;
+
+								 if (options.showPrompts) {
+									 // see if we should display a green prompt
+									 if (msg)
+										methods._showPrompt(errorField, msg, "pass", true, options);
+									 else
+										methods._closePrompt(errorField);
+								}
+
+								 // If a submit form triggered this, we want to re-submit the form
+								 if (options.eventTrigger == "submit")
+									field.closest("form").submit();
+							 }
+						 }
+						 errorField.trigger("jqv.field.result", [errorField, options.isError, msg]);
+					 }
+				 });
+
+				 return rule.alertTextLoad;
+			 }
+		 },
+		/**
+		* Common method to handle ajax errors
+		*
+		* @param {Object} data
+		* @param {Object} transport
+		*/
+		_ajaxError: function(data, transport) {
+			if(data.status == 0 && transport == null)
+				alert("The page is not served from a server! ajax call failed");
+			else if(typeof console != "undefined")
+				console.log("Ajax error: " + data.status + " " + transport);
 		},
 		/**
 		* date -> string

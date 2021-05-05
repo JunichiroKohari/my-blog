@@ -12,16 +12,15 @@ $to = 'junichiro@kohari.jp';
 // メールタイトル
 $subject = 'お問い合わせフォームより';
 // ドメイン（リファラチェックと送信元メールアドレスに利用）
-$domain = 'https://junichirokohari.me/';
+$domain = home_url( '/' );
 
 //変数初期化
 $errflg = false;    // エラー判定フラグ
-$dispmsg = '';  // 画面出力内容
 
 // 入力項目
 $nameval = '';   // 名前
 $mailval = '';   // メールアドレス
-$requirementval = '';    // ウェブサイト
+$requirementval = '';    // ご用件
 $messageval = '';   // 内容
 $referrer = '';  // 遷移元画面
 
@@ -62,16 +61,12 @@ if (strpos($_SERVER['HTTP_REFERER'], $domain) === false){
   $retmail = mail($to,$subject,$message,$header);
 
   // 送信結果の判定
-  if( $retmail ){
-    $dispmsg .='メール送信完了（名前：'.hsc_utf8($nameval).'メール：'.hsc_utf8($mailval).'用件：'.hsc_utf8($requirementval).'メッセージ：'.hsc_utf8($messageval).'リファラ：'.hsc_utf8($referrer);
-  } else{
-    $dispmsg .= '【エラー】メール送信に失敗しました。。';
+  if( !$retmail ){
     $errflg = true;
-  }
 }
 
 // 処理結果を画面に戻す
-$result = array('errflg'=>$errflg, 'dispmsg'=>$dispmsg);
+$result = array('errflg'=>$errflg);
 echo json_encode( $result );
 
 // HTMLエスケープ処理

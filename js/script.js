@@ -42,46 +42,16 @@ function sendmail() {
                 'requirement' : requirement,
                 'message' : message,
                 'check' : check,
-                'referrer' : referrer }
+                'referrer' : referrer },
+        async: false
     })
     .done( function(data){
-        alert('success!');
-        alert(data.errflg);
-        alert(data.dispmsg);
+        alert('お問い合わせいただきありがとうございます！\n3営業日以内に回答いたします!');
     })
     .fail( function(data){
-        modaalflg = true;
-        alert('failed');
+        alert('送信に失敗しました。\nお手数おかけしますが、以下メールアドレスに直接ご連絡いただけますでしょうか。\njunichiro@kohari.jp');
     })
-    return false;
 }
-
-const open = document.getElementById('submit');
-  const close = document.getElementById('close');
-  const modal = document.getElementById('modal');
-  const mask = document.getElementById('mask');
-
-  open.addEventListener('click', function () {
-    modal.classList.remove('hidden');
-    mask.classList.remove('hidden');
-  });
-  close.addEventListener('click', function () {
-    modal.classList.add('hidden');
-    mask.classList.add('hidden');
-  });
-  mask.addEventListener('click', function () {
-    modal.classList.add('hidden');
-    mask.classList.add('hidden');
-  });
-// $('#submit').modaal({
-//     type: 'confirm',
-//     confirm_button_text: 'OK',
-//     confirm_cancel_button_text: '',
-//     confirm_title: 'お問い合わせいただきありがとうございます！',
-//     confirm_content: '<p>3営業日以内に回答いたします。</p>',
-//     // before_open: errorCheck,
-//     should_open: true,
-// });
 
 /* コメント欄 */
 // コメント欄名前必須チェック
