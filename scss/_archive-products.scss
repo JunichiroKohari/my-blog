@@ -98,11 +98,12 @@
         > .product-articles {
             justify-content: center;
             >.products {
-                width: 80%;
+                width: 100%;
+                margin: 0 0 3em 0;
             }
         }
         > .article-more {
-            width: 80%;
+            width: 100%;
             padding: 1em 0;
         }
     }
