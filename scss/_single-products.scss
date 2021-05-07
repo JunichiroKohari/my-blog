@@ -1,0 +1,29 @@
+.product-article {
+    text-align: center;
+    > .article-title {
+        font-size: calc(2rem + 1.5vw);
+        font-weight: 500;
+    }
+    > .taxonomy-div {
+        margin: 0 0 4em 0;
+    }
+    > .taxonomy-div > .taxonomy {
+        margin: 3px;
+        padding: 4px 10px;
+        border-radius: 3px;
+        color: #ffffff;
+        font-size: .8em;
+        &.product-type {
+            background: dodgerblue;
+        }
+        &.customer-type {
+            background: darkturquoise;
+        }
+        &.characteristics {
+            background: violet;
+        }
+        > a {
+            color: #ffffff;
+        }
+    }
+}

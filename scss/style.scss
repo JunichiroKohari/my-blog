@@ -8,7 +8,7 @@ Version: 1.0
 */
 
 @charset "UTF-8";
-@import 'reset', 'header', 'footer', 'sidebar', 'single', '_page-common', 'profile', 'privacypolicy', 'contact', 'modaal', 'faq';
+@import 'reset', 'header', 'footer', 'sidebar', 'single', 'page-common', 'profile', 'privacypolicy', 'contact', 'faq', 'archive-products', 'single-products';
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700,900&display=swap');
 
 /* 初期設定 */
@@ -273,5 +273,6 @@ main {
 .archive-title {
     margin: 0 0 2em 0;
     text-align: center;
-    font-size: calc(1.3rem + .6vw);
+    font-size: calc(1.5rem + .8vw);
+    font-weight: 500;
 }

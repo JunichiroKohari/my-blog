@@ -1,0 +1,109 @@
+.main-no-aside {
+    > .product-articles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 5em 0 0 0;
+        > .products {
+            display: flex;
+            flex-flow: column;
+            width: 44%;
+            min-width: 222px;
+            max-width: 500px;
+            margin: 0 1em 3em 1em;
+            padding: 1em;
+            border-radius: 5px;
+            box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
+            > .thumbnail-link > .product-image {
+                width: 100%;
+            }
+            > .product-title {
+                margin: .5em 0;
+                font-size: calc(1rem + .8vw);
+                text-align: center;
+                > a {
+                    color: #000000;
+                }
+            }
+            > .taxonomy-div {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            > .taxonomy-div > .taxonomy {
+                margin: 3px;
+                padding: 0 10px;
+                border-radius: 3px;
+                color: #ffffff;
+                font-size: .8em;
+                &.product-type {
+                    background: dodgerblue;
+                }
+                &.customer-type {
+                    background: darkturquoise;
+                }
+                &.characteristics {
+                    background: violet;
+                }
+                > a {
+                    color: #ffffff;
+                }
+            }
+        }
+        // 折り返されたフレックスボックスを左寄せするために使う空要素
+        > .is-empty {
+            width: 44%;
+            min-width: 222px;
+            max-width: 500px;
+            height: 0;
+            margin: 0 1em;
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    // 記事追加読み込み
+    > .article-more {
+        display: block;
+        margin: 3em auto 0;
+        padding: 1em 10em;
+        border-radius: 5px;
+        color: #fff;
+        font-size: calc(1rem + .4vw);
+        background: #ae4c35;
+        text-align: center;
+        cursor: pointer;
+        &.is-hide {
+            display: none;
+        }
+    }
+    > .article-loading {
+        text-align: center;
+        margin: 3em 0;
+        font-weight: 700;
+        width: 100%;
+        display: none;
+        &.is-show {
+        display: block;
+        }
+    }
+}
+@media screen and (max-width: 960px) {
+    #wrapper {
+        padding: 0 0 470px 0;
+    }
+}
+@media screen and (max-width: 560px) {
+    .main-no-aside {
+        > .product-articles {
+            justify-content: center;
+            >.products {
+                width: 80%;
+            }
+        }
+        > .article-more {
+            width: 80%;
+            padding: 1em 0;
+        }
+    }
+}

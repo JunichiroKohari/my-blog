@@ -255,6 +255,8 @@ main {
     // 段落
     p {
         margin: 0 0 2.5em 0;
+        word-break: break-word;
+        text-align: left;
     }
     // 線
     hr {

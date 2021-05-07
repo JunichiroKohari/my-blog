@@ -257,15 +257,14 @@
     /* アーカイブページ */
     function my_archive_title($title) {
         if ( is_category() ) {
-            $title = single_cat_title( '', false );
+            $title = single_cat_title( '', false ). 'の記事一覧';
         } elseif ( is_tag() ) {
-            $title = single_tag_title( '', false );
+            $title = single_tag_title( '', false ). 'の記事一覧';
         } elseif ( is_post_type_archive() ) {
             $title = post_type_archive_title( '', false );
         } elseif (is_date()) {
-            $title = get_the_time('Y年n月');
+            $title = get_the_time('Y年n月'). 'の記事一覧';
         }
-        $title .= 'の記事一覧';
         return $title;
     };
     add_filter( 'get_the_archive_title', 'my_archive_title');
