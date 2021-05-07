@@ -1397,11 +1397,11 @@
 					case "bottomLeft":
 					case "bottomRight":
 						prompt.find(".formErrorContent").before(arrow);
-						arrow.addClass("formErrorArrowBottom").html('<div class="line1"><!-- --></div><div class="line2"><!-- --></div><div class="line3"><!-- --></div><div class="line4"><!-- --></div><div class="line5"><!-- --></div><div class="line6"><!-- --></div><div class="line7"><!-- --></div><div class="line8"><!-- --></div><div class="line9"><!-- --></div><div class="line10"><!-- --></div>');
+						arrow.addClass("formErrorArrowBottom").html('<div class="line3"><!-- --></div><div class="line4"><!-- --></div><div class="line5"><!-- --></div><div class="line6"><!-- --></div><div class="line7"><!-- --></div><div class="line8"><!-- --></div><div class="line9"><!-- --></div>');
 						break;
 					case "topLeft":
 					case "topRight":
-						arrow.html('<div class="line10"><!-- --></div><div class="line9"><!-- --></div><div class="line8"><!-- --></div><div class="line7"><!-- --></div><div class="line6"><!-- --></div><div class="line5"><!-- --></div><div class="line4"><!-- --></div><div class="line3"><!-- --></div><div class="line2"><!-- --></div><div class="line1"><!-- --></div>');
+						arrow.html('<div class="line9"><!-- --></div><div class="line8"><!-- --></div><div class="line7"><!-- --></div><div class="line6"><!-- --></div><div class="line5"><!-- --></div><div class="line4"><!-- --></div><div class="line3"><!-- --></div>');
 						prompt.append(arrow);
 						break;
 				}
@@ -1472,7 +1472,7 @@
 				}, options.autoHideDelay);
 			}
 			return prompt.animate({
-				"opacity": 0.87
+				"opacity": 0.8
 			});
 		},
 		/**
@@ -1511,13 +1511,13 @@
 					"left": "initial",
 					"right": pos.callerleftPosition,
 					"marginTop": pos.marginTopSize,
-					"opacity": 0.87};
+					"opacity": 0.8};
 				} else {
 					var css = {"top": pos.callerTopPosition,
 					"left": pos.callerleftPosition,
 					"right": "initial",
 					"marginTop": pos.marginTopSize,
-					"opacity": 0.87};
+					"opacity": 0.8};
 				}
 
                 prompt.css({

@@ -21,8 +21,7 @@
                 <input id="email-for-confirmation" type="email" class="contact-input validate[required,equals[email]]" placeholder="hoge@huga.com" >
             </div>
             <div class="input-item dropdown-div">
-                <span class="not-required">任意</span>
-                <label class="contact-label">お問い合わせご用件</label>
+                <label class="contact-label not-required"><span class="contact-label-text">お問い合わせご用件</span></label>
                 <select id="requirement" name="contact-dropdown" class="contact-input" >
                     <option class="requirement-option" value="ご用件選択なし"></option>
                     <option class="requirement-option" value="Webサイト制作(WordPress)ご依頼">Webサイト制作(WordPress)ご依頼</option>

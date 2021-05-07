@@ -17,30 +17,6 @@
         min-width: 400px;
         margin: 5em auto 0 auto;
     }
-    // > .contact-section > .contact-form > .input-item > .contact-label > .required {
-    //     display: block;
-    //     position: absolute;
-    //     left: auto;
-    //     bottom: auto;
-    //     width: 5.5em;
-    //     border-radius: 3px;
-    //     color: #fff;
-    //     font-size: .8rem;
-    //     background: #EF538F;
-    //     text-align: center;
-    // }
-    > .contact-section > .contact-form > .input-item > .not-required {
-        display: block;
-        position: absolute;
-        left: auto;
-        bottom: auto;
-        width: 6.5em;
-        border-radius: 3px;
-        color: #fff;
-        font-size: .8rem;
-        background: #BAB4B4;
-        text-align: center;
-    }
     > .contact-section > .contact-form > .dropdown-div {
         position: relative;
 
@@ -64,19 +40,26 @@
         color: #AE4C35;
         font-size: calc(1rem + .7vw);
 
-        &.required::before {
-            content: '必須';
+        &::after {
             display: block;
             position: absolute;
-            left: 0;
-            bottom: auto;
-            width: 5.5em;
+            right: 0;
+            bottom: 0;
+            width: 6em;
             border-radius: 3px;
             color: #fff;
             font-size: .8rem;
-            background: #EF538F;
             text-align: center;
         }
+        &.required::after {
+            content: '必須';
+            background: #EF538F;
+        }
+        &.not-required::after {
+            content: '任意';
+            background: #BAB4B4;
+        }
+
     }
     > .contact-section > .contact-form > .input-item > .contact-input {
         width: 100%;
