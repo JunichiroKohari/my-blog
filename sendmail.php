@@ -4,9 +4,6 @@ header('Content-type: application/json');
 // PHP5.1.0以上はタイムゾーンの定義が必須
 date_default_timezone_set('Asia/Tokyo');
 
-// --------------------------
-// 個別設定項目（３つ）
-// --------------------------
 // 送信先メールアドレス
 $to = 'junichiro@kohari.jp';
 // メールタイトル
@@ -14,8 +11,8 @@ $subject = 'お問い合わせフォームより';
 // ドメイン（リファラチェックと送信元メールアドレスに利用）
 $domain = home_url( '/' );
 
-//変数初期化
-$errflg = false;    // エラー判定フラグ
+// エラー判定フラグ
+$errflg = false;
 
 // 入力項目
 $nameval = '';   // 名前
@@ -69,8 +66,4 @@ if (strpos($_SERVER['HTTP_REFERER'], $domain) === false){
 $result = array('errflg'=>$errflg);
 echo json_encode( $result );
 
-// HTMLエスケープ処理
-function hsc_utf8($str) {
-  return htmlspecialchars($str, ENT_QUOTES,'UTF-8');
-}
 ?>

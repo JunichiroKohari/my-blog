@@ -10,7 +10,7 @@
         <form method="POST" id="contact-form" class="contact-form">
             <div class="input-item">
                 <label class="contact-label required"><span class="contact-label-text">お名前</span></label>
-                <input id="name" type="text" class="contact-input validate[required]" placeholder="田中　太郎" >
+                <input id="name" type="text" class="contact-input validate[required,maxSize[30]]" placeholder="田中　太郎" >
             </div>
             <div class="input-item">
                 <label class="contact-label required"><span class="contact-label-text">メールアドレス</span></label>
@@ -33,7 +33,7 @@
             </div>
             <div class="input-item">
                 <label class="contact-label required"><span class="contact-label-text">メッセージ</span></label>
-                <textarea id="message" name="contact-txt" class="contact-input contact-txt validate[required]" placeholder="ご気軽にご入力ください。" ></textarea>
+                <textarea id="message" name="contact-txt" class="contact-input contact-txt validate[required,maxSize[1000]]" placeholder="ご気軽にご入力ください。" ></textarea>
             </div>
             <div class="input-item checkbox-div">
                 <input id="check" name="check" type="checkbox" class="checkbox validate[required]" />
