@@ -75,7 +75,7 @@ $('#article-more').on('click', function() {
     flag = true;
     $.ajax({
       type: 'POST',
-      url: 'http://myblog.local/wp-content/themes/my-blog/ajax-item.php',
+      url: 'http://junichirokohari.me/wp-content/themes/my-blog/ajax-item.php',
       dataType: 'json',
       data: {
         post_num_now: postNumNow,

@@ -4,16 +4,18 @@
 	<main class="main">
 	<?php if (have_posts()) : while ( have_posts() ) : the_post(); ?>
 		<article class="article">
-			<h2 class="article-title"><?php the_title(); ?></h1>
-			<time class="postedtime" datetime="<?php the_time('Y-m-d'); ?>"><i class="fas fa-calendar-alt"></i><?php the_time('Y年m月d日'); ?></time>
-			<span>
-				<i class="fas fa-folder-open"></i>
-				<?php the_category( ' ' ); ?>
-			</span>
-			<span>
-				<i class="fas fa-tag"></i>
-				<?php the_tags( ' ' ); ?>
-			</span>
+			<h1 class="article-title"><?php the_title(); ?></h1>
+			<div class="article-meta">
+				<time class="postedtime" datetime="<?php the_time('Y-m-d'); ?>"><i class="fas fa-calendar-alt"></i><?php the_time('Y年m月d日'); ?></time>
+				<span>
+					<i class="fas fa-folder-open"></i>
+					<?php the_category( ' ' ); ?>
+				</span>
+				<span>
+					<i class="fas fa-tag"></i>
+					<?php the_tags( ' ' ); ?>
+				</span>
+			</div>
 			<?php if ( has_post_thumbnail() ) : ?>
 			<div class="eyecatch-div">
 				<?php the_post_thumbnail( 'large' ); ?>

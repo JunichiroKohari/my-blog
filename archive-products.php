@@ -9,7 +9,7 @@
 				<a href="<?php the_permalink(); ?>" class="thumbnail-link">
 					<?php if (has_post_thumbnail()) : the_post_thumbnail( 'medium' ) ?>
 					<?php else: ?>
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/img/no-image.png' ); ?>" alt="サムネイル画像なし" class="product-image">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/img/no-image.png' ); ?>" alt="サムネイル画像なし" class="wp-post-image">
 					<?php endif; ?>
 				</a>
 				<h2 class="product-title"><a href="<?php the_permalink(); ?>" class="product-title-link"><?php the_title(); ?></a></h2>

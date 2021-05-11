@@ -7,6 +7,7 @@
         > .products {
             display: flex;
             flex-flow: column;
+            justify-content: center;
             width: 44%;
             min-width: 222px;
             max-width: 500px;
@@ -14,12 +15,16 @@
             padding: 1em;
             border-radius: 5px;
             box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
-            > .thumbnail-link > .product-image {
-                width: 100%;
+            > .thumbnail-link {
+                text-align: center;
+                & > .wp-post-image {
+                    width: 100%;
+                    max-width: 500px;
+                }
             }
             > .product-title {
                 margin: .5em 0;
-                font-size: calc(1rem + .8vw);
+                font-size: calc(1.6rem + .8vw);
                 text-align: center;
                 > a {
                     color: #000000;

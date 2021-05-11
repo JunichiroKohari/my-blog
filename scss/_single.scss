@@ -19,24 +19,25 @@ main {
     > .article > .article-title {
         font-size: calc(2rem + 1.5vw);
         font-weight: 500;
+        line-height: 1.4em;
     }
     > .article {
         margin: 1em 0;
     }
-    > .article > .postedtime {
+    > .article > .article-meta {
+        margin: 1em 0 5em 0;
+    }
+    > .article > .article-meta > .postedtime {
         font-size: 1.5rem;
     }
-    > .article > .postedtime > .fas {
+    > .article > .article-meta > .postedtime > .fas {
         margin: 0 5px 0 0;
     }
-    > .article > span {
+    > .article .article-meta > span {
         font-size: 1.5rem;
     }
-    > .article > span > .fas {
+    > .article .article-meta > span > .fas {
         margin: 0 5px 0 0;
-    }
-    > .article > .cat-and-tag-div > .category {
-        margin: 0 1em 0 0;
     }
     > .post-navigation {
         margin: 5em 0;
@@ -182,16 +183,11 @@ main {
 
     // 小見出し
     h2 {
-        margin: 2.5em 0 1em 0;
-        font-size: calc(2rem + 1vw);
-        font-weight: 500;
-    }
-    h3 {
         position: relative;
-        margin: 2.5em 0 1em 0;
+        margin: 3em 0 1em 0;
         border-radius: 0 10px 10px;
         color: #333;
-        font-size: calc(2rem + .8vw);
+        font-size: calc(2rem + .6vw);
         font-weight: 500;
         text-shadow: 0 0 2px white;
         background: #e0f3ff;
@@ -210,11 +206,11 @@ main {
             z-index: -1;
         }
     }
-    h4 {
+    h3 {
         position: relative;
-        margin: 2.5em 0 1em 0;
+        margin: 2.8em 0 1em 0;
         color: #333;
-        font-size: calc(2rem + .6vw);
+        font-size: calc(2rem + .4vw);
         font-weight: 500;
         text-shadow: 0 0 2px white;
 
@@ -231,15 +227,15 @@ main {
             z-index: -1;
         }
     }
-    h5 {
-        margin: 2.5em 0 1em 0;
+    h4 {
+        margin: 2.6em 0 1em 0;
         padding: 0 0 3px 0;
         border-bottom: 1px solid #64b6ed;
-        font-size: calc(2rem + .4vw);
+        font-size: calc(2rem + .3vw);
         font-weight: 500;
     }
-    h6 {
-        margin: 2.5em 0 1em 0;
+    h5 {
+        margin: 2.4em 0 1em 0;
         font-size: calc(2rem + .2vw);
         font-weight: 500;
     }
