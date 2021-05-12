@@ -95,6 +95,7 @@ $('#article-more').on('click', function() {
     })
     .fail( function(res){
         alert('記事の読み込みに失敗しました。');
+        $('.article-loading').removeClass('is-show');
     })
   }
 })
