@@ -5,13 +5,6 @@
     // css, javascript 読み込み
     function add_assets() {
         /* css */
-        // slick
-        // wp_enqueue_style(
-        //     'slick',
-        //     get_theme_file_uri('//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'),
-        //     array(),
-        //     '1.8.1'
-        // );
         // fontawesome
         wp_enqueue_style(
             'fontawesome',
@@ -19,12 +12,12 @@
             array(),
             '5.0.6'
         );
-        // my css
+        // slick
         wp_enqueue_style(
-            'my-style',
-            get_theme_file_uri('/style.css'),
+            'slick',
+            get_theme_file_uri('/css/slick.css'),
             array(),
-            filemtime( get_theme_file_path('/style.css'))
+            '1.8.1'
         );
         // jQuery validationEngine
         wp_enqueue_style(
@@ -32,6 +25,13 @@
             get_theme_file_uri('/css/validationEngine.jquery.css'),
             array(),
             filemtime( get_theme_file_path('/css/validationEngine.jquery.css'))
+        );
+        // my css
+        wp_enqueue_style(
+            'my-style',
+            get_theme_file_uri('/style.css'),
+            array(),
+            filemtime( get_theme_file_path('/style.css'))
         );
 
         /* javascript */
@@ -61,13 +61,13 @@
             true
         );
         // slick
-        // wp_enqueue_script(
-        //     'slick',
-        //     '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
-        //     array(),
-        //     '1.8.1',
-        //     true
-        // );
+        wp_enqueue_script(
+            'slick',
+            get_theme_file_uri( '/js/slick.min.js' ),
+            array( 'jquery' ),
+            '1.8.1',
+            true
+        );
         // my javascript
         wp_enqueue_script(
             'base-script',

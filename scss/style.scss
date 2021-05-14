@@ -8,7 +8,7 @@ Version: 1.0
 */
 
 @charset "UTF-8";
-@import 'reset', 'header', 'footer', 'sidebar', 'single', 'page-common', 'profile', 'privacypolicy', 'contact', 'faq', 'archive-products', 'single-products', 'technologies';
+@import 'reset', 'header', 'footer', 'sidebar', 'popular-article-list', 'single', 'page-common', 'profile', 'privacypolicy', 'contact', 'faq', 'archive-products', 'single-products', 'technologies';
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700,900&display=swap');
 
 
@@ -45,48 +45,6 @@ input[type="text"], textarea {
 
 /* 記事 */
 #wrapper {
-    > .popular-articles {
-        width: 90%;
-        max-width: 1150px;
-        margin: 5em auto 0 auto;
-    }
-    > .popular-articles > .popular-article-heading {
-        margin: 0 0 2em 0;
-        font-size: calc(1.6rem + .5vw);
-        text-align: center;
-        white-space: nowrap;
-    }
-    > .popular-articles > .popular-articles-ul {
-        display: flex;
-        justify-content: space-between;
-    }
-    > .popular-articles > .popular-articles-ul > .popular-article-li {
-        width: 30%;
-        min-width: 215px;
-        padding: 1em;
-        background: #F5ECEC;
-        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
-    }
-    > .popular-articles > .popular-articles-ul > .popular-article-li > .popular-article > .thumbnail-img {
-        display: block;
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
-    }
-    > .popular-articles > .popular-articles-ul > .popular-article-li > .popular-article > .article-title {
-        padding: 1em 0;
-        font-size: calc(1.6rem + .6vw);
-        font-weight: 500;
-        line-height: 1.2em;
-    }
-    > .popular-articles > .popular-articles-ul > .popular-article-li > .popular-article > .article-metainfo {
-        display: flex;
-        flex-flow: column;
-        justify-content: space-between;
-    }
-    > .popular-articles > .popular-articles-ul > .popular-article-li > .popular-article > .article-metainfo > .time > .postedtime {
-        padding: 0 0 0 .2em;
-    }
     > .ad-placeholder {
         width: 90%;
         max-width: 1150px;

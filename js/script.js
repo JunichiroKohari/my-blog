@@ -75,7 +75,7 @@ $('#article-more').on('click', function() {
     flag = true;
     $.ajax({
       type: 'POST',
-      url: 'http://junichirokohari.me/wp-content/themes/my-blog/ajax-item.php',
+      url: 'https://junichirokohari.me/wp-content/themes/my-blog/ajax-item.php',
       dataType: 'json',
       data: {
         post_num_now: postNumNow,
@@ -116,9 +116,30 @@ function wrappedFlexboxAlignLeft() {
 // コメント欄名前必須チェック
 // $('#submit').attr('required', true);
 
-/* スライダー */
-// $('.slider').slick({
-//   infinite: true,
-//   slidesToShow: 3,
-//   slidesToScroll: 3
-// });
+
+/* 人気記事 */
+$('.slider').slick({
+    autoplay: true,     // 自動スクロール
+    infinite: true,     // スライドをループさせるかどうか
+    slidesToShow: 3,    // スライド数
+    slidesToScroll: 3,  // 1回のスクロールで移動する枚数
+    prevArrow: '<div class="slick-prev"></div>', // 矢印PreviewのHTML
+    nextArrow: '<div class="slick-next"></div>', // 矢印NextのHTML
+    dots: true,         // 下部ドットナビゲーションの表示
+    responsive: [
+        {
+        breakpoint: 960, // ブレイクポイント769px
+        settings: {
+            slidesToShow: 2,   // スライド数
+            slidesToScroll: 2, // 1回のスクロールで移動する枚数
+        }
+    },
+    {
+        breakpoint: 560, // ブレイクポイント426px
+        settings: {
+            slidesToShow: 1,   // スライド数
+            slidesToScroll: 1, // 1回のスクロールで移動する枚数
+        }
+    }
+]
+});

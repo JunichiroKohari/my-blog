@@ -1,0 +1,120 @@
+.popular-articles {
+    width: 90%;
+    max-width: 1150px;
+    margin: 5em auto 0 auto;
+    > .popular-article-heading {
+        margin: 0 0 1.5em 0;
+        font-size: calc(1.8rem + .5vw);
+        text-align: center;
+    }
+    /* =================================
+      slider
+    =================================== */
+    > .slider {
+        width:90%;
+        margin:0 auto;
+        // slickのJSで書かれるタグ内、スライド左右の余白調整
+        &.slick-slide {
+            margin:0 1em;
+        }
+        /* 戻る、次へ矢印の位置 */
+        > .slick-prev, > .slick-next {
+            position: absolute;
+            top: 42%;
+            cursor: pointer;
+            outline: none;
+            border-top: 5px solid #666;
+            border-right: 5px solid #666;
+            height: 15px;
+            width: 15px;
+        }
+        // 戻る矢印の位置と形状
+        > .slick-prev {
+            left: -1.5%;
+            transform: rotate(-135deg);
+        }
+        // 次へ矢印の位置と形状
+        > .slick-next {
+            right: -1.5%;
+            transform: rotate(45deg);
+        }
+        /*ドットナビゲーションの設定*/
+        > .slick-dots {
+            text-align:center;
+            margin:20px 0 0 0;
+            > li {
+                display:inline-block;
+                margin:0 5px;
+            }
+            > li > button {
+                color: transparent;
+                outline: none;
+                width:8px;
+                height:8px;
+                display:block;
+                border-radius:50%;
+                background:#ccc;
+            }
+            // 現在選択されているドットボタン
+            > .slick-active > button {
+                background:#333;
+            }
+        }
+    }
+    /* =================================
+      人気記事スライド
+    =================================== */
+    > .slider > .slick-list > .slick-track > .popular-article {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        height: 400px;
+        margin: 0 2em;
+        padding: 2em;
+        border-radius: 5px;
+        box-shadow: 0 0 5px 0 rgba(174, 75, 53, 0.12), 0 4px 5px 0 rgba(174, 75, 53, 0.22);
+        > .thumbnail-link {
+            flex: 5.5;
+            display: flex;
+            align-items: center;
+            margin: 1em auto;
+        }
+        > .popular-article-info {
+            flex: 4.5;
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-end;
+        }
+        > .popular-article-info > .article-title {
+            padding: 1em 0;
+            font-size: calc(1.3rem + .3vw);
+            font-weight: 500;
+            line-height: 1.2em;
+            > .article-title-link {
+                color: #000000;
+            }
+        }
+        > .popular-article-info > .postedtime {
+            font-size: 1.1rem;
+        }
+        > .popular-article-info > span {
+            font-size: 1.1rem;
+        }
+        .fas {
+            margin: 0 .3em 0 0;
+        }
+    }
+}
+@media screen and (max-width: 560px) {
+    .popular-articles {
+        > .slider > .slick-list > .slick-track > .popular-article {
+            height: 350px;
+            > .popular-article-info > .postedtime {
+                font-size: 1rem;
+            }
+            > .popular-article-info > span {
+                font-size: 1rem;
+            }
+        }
+    }
+}

@@ -1,3 +1,4 @@
+<?php /* 記事View数カウント */ if( !is_user_logged_in() ) { set_post_views( get_the_ID() ); } ?>
 <?php get_header(); ?>
 
 <div class="main-and-aside margin-from-header">
