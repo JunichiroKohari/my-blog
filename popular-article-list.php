@@ -13,7 +13,7 @@
 <section class="popular-articles">
     <h2 class="popular-article-heading">👑 人気記事 👑</h2>
     <div class="slider">
-        <?php if ( $popular_query->have_posts() ) : while ( $popular_query->have_posts() ) : $popular_query->the_post(); ?>
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <?php $classes = array('new-articles', 'sp-version-article', 'news'); ?>
             <article id="post-<?php the_ID(); ?>" class="popular-article">
                 <a href="<?php the_permalink(); ?>" class="thumbnail-link">

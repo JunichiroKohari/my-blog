@@ -122,7 +122,7 @@
     add_filter( 'the_category', 'user_override_the_category', 10, 1 );
 
     /* 人気記事一覧 */
-    // 人気記事出力
+    // 人気記事View数取得（表示するか未定）
     function getPostViews($postID){
         $count_key = 'post_views_count';
         $count = get_post_meta($postID, $count_key, true);
@@ -133,7 +133,7 @@
         }
         return $count.' Views';
     }
-    // 記事viewカウント
+    // 記事View数カウント
     function setPostViews($postID) {
         $count_key = 'post_views_count';
         $count = get_post_meta($postID, $count_key, true);
