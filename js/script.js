@@ -112,11 +112,6 @@ function wrappedFlexboxAlignLeft() {
     productArticles.append(emptyArticles);
 }
 
-/* コメント欄 */
-// コメント欄名前必須チェック
-// $('#submit').attr('required', true);
-
-
 /* 人気記事 */
 $('.slider').slick({
     autoplay: true,     // 自動スクロール
