@@ -1,9 +1,9 @@
-<?php /* 記事View数カウント */ if( !is_user_logged_in() ) { setPostViews( get_the_ID() ); } ?>
+<?php if( !is_user_logged_in() ) { setPostViews( get_the_ID() ); } // 記事View数カウント ?>
 <?php get_header(); ?>
 
 <div class="main-and-aside margin-from-header">
 	<main class="main">
-	<?php if (have_posts()) : while ( have_posts() ) : the_post(); ?>
+		<?php if (have_posts()) : while ( have_posts() ) : the_post(); ?>
 		<article class="article">
 			<h1 class="article-title"><?php the_title(); ?></h1>
 			<div class="article-meta">
@@ -18,23 +18,23 @@
 				</span>
 			</div>
 			<?php if ( has_post_thumbnail() ) : ?>
-			<div class="eyecatch-div">
-				<?php the_post_thumbnail( 'large' ); ?>
-			</div>
-			<?php endif; ?>
-			<?php the_content(); ?>
-		</article>
-		<?php the_post_navigation( array(
-			'screen_reader_text'=>' ',
-			'prev_text' => '前の記事：%title',
-			'next_text' => '次の記事：%title',
-		) ); ?>
+				<div class="eyecatch-div">
+					<?php the_post_thumbnail( 'large' ); ?>
+				</div>
+				<?php endif; ?>
+				<?php the_content(); ?>
+			</article>
+			<?php the_post_navigation( array(
+				'screen_reader_text'=>' ',
+				'prev_text' => '前の記事：%title',
+				'next_text' => '次の記事：%title',
+				) ); ?>
 		<?php if ( comments_open() || get_comments_number() ) :
 			comments_template();
 		endif; ?>
 	<?php endwhile; endif; ?>
-	</main>
-	<?php get_sidebar(); ?>
+</main>
+<?php get_sidebar(); ?>
 </div>
 
 <?php get_footer();

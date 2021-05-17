@@ -53,11 +53,11 @@
                 height:8px;
                 display:block;
                 border-radius:50%;
-                background:#ccc;
+                background:#868686;
             }
             // 現在選択されているドットボタン
             > .slick-active > button {
-                background:#333;
+                background:#ffffff;
             }
         }
     }
@@ -91,7 +91,7 @@
             font-weight: 500;
             line-height: 1.2em;
             > .article-title-link {
-                color: #000000;
+                color: #ffffff;
             }
         }
         > .popular-article-info > .postedtime {
@@ -108,7 +108,7 @@
 @media screen and (max-width: 560px) {
     .popular-articles {
         > .slider > .slick-list > .slick-track > .popular-article {
-            height: 350px;
+            height: 380px;
             > .popular-article-info > .postedtime {
                 font-size: 1rem;
             }

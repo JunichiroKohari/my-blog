@@ -8,13 +8,12 @@ Version: 1.0
 */
 
 @charset "UTF-8";
-@import 'reset', 'header', 'footer', 'sidebar', 'popular-article-list', 'single', 'page-common', 'profile', 'privacypolicy', 'contact', 'faq', 'archive-products', 'single-products', 'technologies';
+@import 'reset', 'header', 'footer', 'sidebar', 'popular-article-list', 'new-article-list', 'single', 'page-common', 'profile', 'privacypolicy', 'contact', 'faq', 'archive-products', 'single-products', 'technologies';
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700,900&display=swap');
-
 
 /* 初期設定 */
 a {
-    color: #0ab0fa;
+    color: #64b6ed;
 }
 img {
     height: auto;
@@ -26,10 +25,12 @@ input[type="text"], textarea {
 #wrapper {
     position: relative;
     width: 100%;
+    padding: 0 0 200px 0;
     min-height: 100vh;
     font-family: 'Noto Sans JP', 'ヒラギノ角ゴ Pro W', 'Hiragino Kaku Gothic Pro', 'メイリオ', '游ゴシック', '游ゴシック体', sans-serif;
+    color: #cecece;
+    background: #2e303e;
     overflow: hidden;
-    padding: 0 0 200px 0;
     box-sizing: border-box;
 }
 @media screen and (max-width: 960px) {
@@ -86,161 +87,6 @@ input[type="text"], textarea {
         > .popular-articles > .popular-articles-ul > .popular-article-center {
             display: none;
         }
-    }
-}
-main {
-    flex-basis: calc(100% - 330px);
-}
-.new-articles {
-    display: flex;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
-    margin: 0 0 5em 0;
-    padding: 3em;
-    border-radius: 5px;
-    > .article-left-div {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 3em 0 0;
-    }
-    > .thumbnail-link > .wp-post-image {
-        display: block;
-    }
-    > .article-right-div {
-        display: flex;
-        flex-flow: row wrap;
-        width: calc(100% - 160px);
-        word-break: break-all;
-    }
-    > .article-right-div > .article-title {
-        width: 100%;
-        margin: 0 0 1em 0;
-        font-size: calc(1.6rem + .8vw);
-        line-height: 1.2em;
-    }
-    > .article-right-div > .article-title > .article-title-link {
-        color: black;
-    }
-    > .article-right-div > .postedtime {
-        margin: 0 10px 0 0;
-        font-size: 1.3rem;
-    }
-    > .article-right-div > .postedtime > .fas {
-        margin: 0 5px 0 0;
-    }
-    > .article-right-div > span {
-        margin: 0 10px 0 0;
-        font-size: 1.3rem;
-    }
-    > .article-right-div > span > .fas {
-        margin: 0 5px 0 0;
-    }
-    > .article-right-div > .excerpt {
-        margin: 1em 0;
-        font-size: 1.6rem;
-        overflow-wrap: break-word;
-    }
-    > .article-right-div > .excerpt > p > .to-article-link {
-        font-size: calc(1.2rem + .2vw);
-    }
-}
-.new-articles:nth-child(-n+2) > .article-right-div > .article-title::before {
-    content: 'new';
-    margin: 0 10px 0 0;
-    padding: 2px 10px 4px 10px;
-    border-radius: 1px;
-    vertical-align: top;
-    background: #F52E5C;
-    color: #fff;
-    font-size: 1.2rem;
-}
-@media screen and (max-width: 960px) {
-    main {
-        flex-basis: auto;
-        width: 100%;
-        margin: 0 auto;
-    }
-    .new-articles{
-        flex-flow: column;
-        margin: 0 0 25px;
-        border-top: 0;
-        background: #fff;
-        cursor: pointer;
-        > .article-left-div {
-            width: auto;
-            margin: 2em 3em 0 3em;
-        }
-        > .article-left-div > .thumbnail-link > .wp-post-image {
-            margin: 0 auto;
-        }
-        > .article-right-div {
-            width: 100%;
-            padding: 0 1em 1em 1em;
-        }
-        > .article-right-div > .article-title {
-            margin: 1em 0;
-        }
-        > .article-right-div > .post-description {
-            display: none;
-        }
-    }
-    .sp-version-article {
-        .article-title {
-            margin: 1em 0;
-            font-size: 2.4rem;
-            font-weight: 500;
-        }
-        .article-metainfo {
-            flex-flow: column;
-            justify-content: space-between;
-            margin: 0 0 0.8em 0;
-        }
-    }
-}
-
-/* SP版記事共通 */
-.sp-version-article {
-    border-radius: 5px;
-    .article-metainfo {
-        display: flex;
-        margin: 5px 0;
-        font-size: 1.2rem;
-    }
-}
-@media screen and (max-width: 560px) {
-    .new-articles {
-        > .article-left-div {
-            width: auto;
-            margin: 0em 1em;
-        }
-        > .thumbnail-link > .wp-post-image {
-            width: 100%;
-            max-width: 300px;
-        }
-        > .article-right-div {
-            padding: 0 0 1em 0;
-        }
-    }
-}
-
-/* ページネーション */
-.pagenation {
-    display: flex;
-    justify-content: center;
-    margin: 60px 0 0 0;
-    > .pagenation-ol {
-        display: flex;
-        margin: 0 .5em;
-    }
-    > .pagenation-ol > .pagenation-btn {
-        margin: 0 .5em;
-        padding: 5px 12px;
-        font-size: 1.6rem;
-    }
-    > .pagenation-btn {
-        padding: 7px 12px;
-        font-size: 1.4rem;
     }
 }
 
