@@ -129,9 +129,9 @@
         if($count==''){
                 delete_post_meta($postID, $count_key);
                 add_post_meta($postID, $count_key, '0');
-                return "0 View";
+                return '<span><i class="fas fa-eye"></i>0 PV</span>';
         }
-        return $count.' Views';
+        return '<span><i class="fas fa-eye"></i>' .$count. ' PV</span>';
     }
     // 記事View数カウント
     function setPostViews($postID) {
@@ -141,7 +141,7 @@
                 $count = 0;
                 delete_post_meta($postID, $count_key);
                 add_post_meta($postID, $count_key, '0');
-        }else{
+        } else {
                 $count++;
                 update_post_meta($postID, $count_key, $count);
         }

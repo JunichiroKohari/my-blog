@@ -10,12 +10,10 @@ aside {
     > .widget {
         width: 100%;
         border-radius: 5px;
-        box-shadow: 0 0 3px 0 rgba(255, 255, 255, 0.12), 0 2px 3px 0 rgba(255, 255, 255, 0.22);
         font-size: 1.4rem;
     }
     > .widget > .widget-title {
         padding: 5px 0;
-        border-bottom: 1px solid gray;
         border-radius: 5px;
         background: #AE4C35;
         color: #ffffff;
@@ -33,10 +31,6 @@ aside {
             display: block;
             width: 80%;
             margin: 1em auto;
-            border-bottom: 1px solid gray;
-        }
-        & > a {
-            color: #0AB0FA;
         }
     }
     > .ad-placeholder {

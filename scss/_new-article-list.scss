@@ -3,7 +3,6 @@ main {
 }
 .new-articles {
     display: flex;
-    box-shadow: 0 0 3px 0 rgba(255, 255, 255, 0.12), 0 2px 3px 0 rgba(255, 255, 255, 0.22);
     margin: 0 0 5em 0;
     padding: 3em;
     border-radius: 5px;
@@ -75,7 +74,6 @@ main {
         flex-flow: column;
         margin: 0 0 25px;
         border-top: 0;
-        background: #fff;
         cursor: pointer;
         > .article-left-div {
             width: auto;

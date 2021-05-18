@@ -117,7 +117,7 @@ $('.slider').slick({
     autoplay: true,     // 自動スクロール
     infinite: true,     // スライドをループさせるかどうか
     slidesToShow: 3,    // スライド数
-    slidesToScroll: 3,  // 1回のスクロールで移動する枚数
+    slidesToScroll: 1,  // 1回のスクロールで移動する枚数
     prevArrow: '<div class="slick-prev"></div>', // 矢印PreviewのHTML
     nextArrow: '<div class="slick-next"></div>', // 矢印NextのHTML
     dots: true,         // 下部ドットナビゲーションの表示

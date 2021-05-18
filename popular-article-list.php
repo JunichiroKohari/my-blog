@@ -1,6 +1,4 @@
 <?php
-    setPostViews(get_the_ID());
-
     $args = array(
     'meta_key' => 'post_views_count',
     'orderby' => 'meta_value_num',
@@ -13,7 +11,7 @@
 <section class="popular-articles">
     <h2 class="popular-article-heading">👑 人気記事 👑</h2>
     <div class="slider">
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <?php if ( $popular_query->have_posts() ) : while ( $popular_query->have_posts() ) : $popular_query->the_post(); ?>
             <?php $classes = array('new-articles', 'sp-version-article', 'news'); ?>
             <article id="post-<?php the_ID(); ?>" class="popular-article">
                 <a href="<?php the_permalink(); ?>" class="thumbnail-link">
@@ -36,6 +34,7 @@
                         <i class="fas fa-tag"></i>
                         <?php the_tags( ' ' ); ?>
                     </span>
+                    <?php echo getPostViews(get_the_ID()); // 記事閲覧回数表示 ?>
                     <?php endif; ?>
                 </div>
             </article>

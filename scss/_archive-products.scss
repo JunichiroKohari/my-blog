@@ -14,7 +14,6 @@
             margin: 0 1em 3em 1em;
             padding: 1em;
             border-radius: 5px;
-            box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
             > .thumbnail-link {
                 text-align: center;
                 & > img {
@@ -27,7 +26,7 @@
                 font-size: calc(1.6rem + .8vw);
                 text-align: center;
                 > a {
-                    color: #000000;
+                    color: #ffffff;
                 }
             }
             > .taxonomy-div {
